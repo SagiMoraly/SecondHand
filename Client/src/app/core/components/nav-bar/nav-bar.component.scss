@@ -1,0 +1,42 @@
+
+.navbar-container{
+    direction: rtl;
+    display: flex;
+    height: 4rem;
+
+    .nav{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .nav-item{
+            padding: 0 20px;
+            position: relative;
+            ul{
+                position: absolute;
+                display: flex;
+                height: 100%;
+                display: none;
+                li{
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            &:hover{
+                ul{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    span{
+        color: #363636;
+        cursor: pointer;
+    }
+
+    
+    
+}
