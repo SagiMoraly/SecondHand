@@ -6,7 +6,6 @@ import { UserModule } from '../user/user.module';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CoreComponent } from './pages/core/core.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 
@@ -14,8 +13,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
   declarations: [
     NavBarComponent,
     HomeComponent,
-    CoreComponent,
-    NotFoundComponent
+    CoreComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +23,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     UserModule
   ],
   exports: [
-    SharedModule
+    SharedModule,
+    CoreComponent
   ]
 })
 export class CoreModule { }
