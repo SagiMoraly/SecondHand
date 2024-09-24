@@ -6,26 +6,23 @@ import { UserModule } from '../user/user.module';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CoreComponent } from './pages/core/core.component';
-
-
+import { AdCardComponent } from './components/ad-card/ad-card.component';
 
 @NgModule({
   declarations: [
     NavBarComponent,
     HomeComponent,
-    CoreComponent
+    CoreComponent,
+    AdCardComponent,
   ],
   imports: [
     CommonModule,
     RealestateModule,
     RealestateModule,
     SharedModule,
-    UserModule
+    UserModule,
   ],
-  exports: [
-    SharedModule,
-    CoreComponent
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  exports: [SharedModule, CoreComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class CoreModule { }
+export class CoreModule {}
