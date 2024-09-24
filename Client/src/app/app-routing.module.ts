@@ -32,14 +32,14 @@ const routes: Routes = [
       {
         path:"realestate", children:[
           {
-            path:"", redirectTo: "forsale", pathMatch: "full"
-          },
-          {
             path:"forsale", component:ForsaleComponent
           },
           {
             path:"rent", component:RentComponent
-          }
+          },
+          {
+            path:"", redirectTo: "forsale", pathMatch: "full"
+          },
         ]
       },
       {

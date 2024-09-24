@@ -1,14 +1,22 @@
 .navbar-container {
   direction: rtl;
   display: flex;
-  //   height: 4rem;
   flex-wrap: wrap;
   min-height: 64px;
-  //   height: 64px;
   padding: 0 20px;
+  box-shadow: 2px 2px 10px rgb(208, 208, 208);
+  width: 100vw;
+  z-index: 100;
+  background-color: white;
+  opacity: .96;
 
-  img {
-    width: 74px;
+  .logo-icon{
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    img {
+      width: 74px;
+    }
   }
 
   .nav {
@@ -27,7 +35,7 @@
       ul {
         min-width: 225px;
         display: none;
-        grid-template-rows: repeat(8, 25px);
+        grid-template-rows: repeat(5, 25px);
         gap: 11px;
         padding: 25px;
         grid-auto-flow: column;
@@ -35,18 +43,18 @@
         position: absolute;
         top: 64px;
         right: 0;
-        // display: flex;
-        // height: 100%;
-        // display: none;
-        // align-items: center;
+        background-color: white;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .2);
         li {
           height: 100%;
           list-style: none;
           padding: 0;
           margin: 0;
           width: 100%;
-          span {
-            min-width: 150px;
+          min-width: 150px;
+          svg{
+            font-size: 1.5rem;
           }
         }
       }
@@ -55,6 +63,11 @@
         background-color: rgb(238, 238, 238);
         ul {
           display: grid;
+          li:hover{
+            span, svg{
+              color:rgb(255,119,10);
+            }
+          }
         }
       }
     }

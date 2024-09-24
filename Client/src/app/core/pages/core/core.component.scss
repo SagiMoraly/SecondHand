@@ -1,0 +1,12 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    // gap: 64px;
+    .nav-bar{
+        position: fixed;
+    }
+    .content{
+        margin-top: 64px;
+    }
+}
