@@ -1,0 +1,98 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    direction: rtl;
+    .banner-carousel{
+        width: 1200px;
+        height: 278px;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f8f8f8;
+        transition: all .6s;
+        &:hover{
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .2);
+        }
+        img{
+            overflow: clip;
+            border-style: none;
+            max-width: 100%;
+        }
+    }
+    
+    .leading-category-container{
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .leading-category{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 140px;
+            .leading-category-img{
+                width: 140px;
+                height: 140px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                border: solid 1px rgb(238, 238, 238);
+                background-color: rgb(238, 238, 238);
+                transition: all .15s;
+                &:hover{
+                    background-color: rgba(243, 243, 243, 0.676);
+                }
+            }
+            span{
+                margin-top: 12px;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .dont-miss-us{
+        width: 1200px;
+        img{
+            width: 1200px;
+        }
+    }
+
+    .popular-services-list{
+        width: 1200px;
+        .popular{
+            display: grid;
+            grid-template-columns: repeat(2, min-content);
+            grid-template-rows: repeat(2, min-content);
+            gap: 12px;
+            justify-content: normal;
+            li{
+                display: flex;
+                height: 80px;
+                width: 290px;
+                overflow: hidden;
+                padding: 8px 14px;
+                // display: grid;
+                align-items: center;
+                // grid-template-columns: 70px 1fr;
+    
+                border: 1px solid rgb(238,238,238);
+                border-radius: 8px;
+                margin: 0 6px;
+                background-color: white;
+                transition: all .3s;
+                box-shadow: 0 2px 6px rgba(0,0,0,.06);
+    
+                img{
+                    border-style: none;
+                    max-width: 100%;
+                }
+                
+            }
+    }
+    }
+}

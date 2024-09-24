@@ -1,0 +1,19 @@
+<svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="6.88274" y="9.75886" width="29.0752" height="43.0752" rx="3.53759" transform="rotate(-15 6.88274 9.75886)" fill="white" stroke="#363636" stroke-width="0.92482"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M35.0911 47.2739C25.7842 45.3507 17.3816 37.0785 14.3117 25.6216C12.579 19.1551 12.8249 12.7177 14.6441 7.20048L10.1801 8.39661C8.04625 8.96838 6.77991 11.1617 7.35168 13.2956L16.6692 48.0689C17.2409 50.2028 19.4343 51.4691 21.5681 50.8973L35.0911 47.2739Z" fill="#363636"/>
+<rect x="22.873" y="23.0738" width="5.07518" height="5.07518" rx="0.46241" transform="rotate(-15 22.873 23.0738)" fill="#F8F8F8" stroke="#363636" stroke-width="0.92482"/>
+<rect x="31.5683" y="20.7442" width="5.07518" height="5.07518" rx="0.46241" transform="rotate(-15 31.5683 20.7442)" fill="#F8F8F8" stroke="#363636" stroke-width="0.92482"/>
+<rect x="33.8964" y="29.4378" width="5.07518" height="14.0752" rx="0.46241" transform="rotate(-15 33.8964 29.4378)" fill="#F8F8F8" stroke="#363636" stroke-width="0.92482"/>
+<rect x="14.1796" y="25.4029" width="5.07518" height="5.07518" rx="0.46241" transform="rotate(-15 14.1796 25.4029)" fill="#F8F8F8" stroke="#363636" stroke-width="0.92482"/>
+<rect x="16.5097" y="34.0965" width="5.07518" height="5.07518" rx="0.46241" transform="rotate(-15 16.5097 34.0965)" fill="#F8F8F8" stroke="#363636" stroke-width="0.92482"/>
+<rect x="18.8398" y="42.7896" width="5.07518" height="5.07518" rx="0.46241" transform="rotate(-15 18.8398 42.7896)" fill="#F8F8F8" stroke="#363636" stroke-width="0.92482"/>
+<rect x="25.2031" y="31.7672" width="5.07518" height="5.07518" rx="0.46241" transform="rotate(-15 25.2031 31.7672)" fill="#F8F8F8" stroke="#363636" stroke-width="0.92482"/>
+<rect x="27.5312" y="40.4605" width="5.07518" height="5.07518" rx="0.46241" transform="rotate(-15 27.5312 40.4605)" fill="#F8F8F8" stroke="#363636" stroke-width="0.92482"/>
+<rect x="10.5566" y="11.88" width="23.1205" height="11.0978" rx="0.803133" transform="rotate(-15 10.5566 11.88)" fill="url(#paint0_linear_1085_4645)" stroke="#363636" stroke-width="0.92482"/>
+<defs>
+<linearGradient id="paint0_linear_1085_4645" x1="22.0129" y1="29.587" x2="31.631" y2="10.3507" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF7100"/>
+<stop offset="1" stop-color="#F6DA35"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RealestateModule } from '../realestate/realestate.module';
 import { SharedModule } from '../shared/shared.module';
@@ -25,6 +25,7 @@ import { CoreComponent } from './pages/core/core.component';
   exports: [
     SharedModule,
     CoreComponent
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CoreModule { }
