@@ -54,7 +54,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(opt =>
 }
     );
 // implament the repositories
-builder.Services.AddTransient<IUsersRepository, UsersRepository>();
+//builder.Services.AddTransient<IUsersRepository, UsersRepository>();
 //builder.Services.AddTransient<IBooksRepository, BooksRepository>();
 //builder.Services.AddTransient<ICartsRepository, CartsRepository>();
 //builder.Services.AddSingleton<UtilitysFunctions, UtilitysFunctions>();
