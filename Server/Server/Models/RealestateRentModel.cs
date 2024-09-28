@@ -52,5 +52,7 @@ namespace Server.Models
 
         // Indicator if this is a favorite
         public bool IsFavorite { get; set; }
+        
+        // add date
     }
 }

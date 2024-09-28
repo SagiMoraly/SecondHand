@@ -1,0 +1,22 @@
+<div class="slider-container">
+  <input
+    type="range"
+    [(ngModel)]="noSwitchingSlider.minValue"
+    [min]="noSwitchingSlider.options.floor"
+    [max]="noSwitchingSlider.maxValue"
+    [step]="noSwitchingSlider.options.step"
+    (input)="onMinChange()"
+  />
+  <input
+    type="range"
+    [(ngModel)]="noSwitchingSlider.maxValue"
+    [min]="noSwitchingSlider.minValue"
+    [max]="noSwitchingSlider.options.ceil"
+    [step]="noSwitchingSlider.options.step"
+    (input)="onMaxChange()"
+  />
+  <div class="slider-labels">
+    <span>Min: {{ noSwitchingSlider.minValue }}</span>
+    <span>Max: {{ noSwitchingSlider.maxValue }}</span>
+  </div>
+</div>

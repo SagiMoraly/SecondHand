@@ -1,0 +1,30 @@
+<div class="search-conteiner">
+  <div>
+    <input
+      id="car"
+      #searchInput
+      placeholder="איזור, עיר שכונה או רחוב"
+      class="form-control"
+      type="text"
+      autocomplete="off"
+      (click)="showOptions()"
+      (blur)="showSearches = false"
+      (input)="searchForPlaces($event)"
+    />
+  </div>
+
+  <!--  DropDown Starts  -->
+  <div class="autocomplete-container" [hidden]="!showSearches">
+    <div class="search">
+      <div
+        *ngFor="let option of filteredSearchOtions"
+        tappable
+        (mousedown)="selectOption(option)"
+        class="search-result"
+      >
+        {{ option }}
+      </div>
+    </div>
+    <!-- <p class="search" [hidden]="!isSearching">Searching cars...</p> -->
+  </div>
+</div>

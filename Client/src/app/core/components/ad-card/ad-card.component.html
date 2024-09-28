@@ -1,8 +1,9 @@
-<div>
+<div class="container">
   <div>
-    <img src="" alt="" />
+    <img class="img" [src]="homeAdObj.img" [alt]="homeAdObj.alt" />
   </div>
-  <div>
-    <span></span>
+  <div class="text-box">
+    <div class="title" *ngIf="homeAdObj.title">{{ homeAdObj.title }}</div>
+    <div>{{ homeAdObj.descrition }}</div>
   </div>
 </div>
