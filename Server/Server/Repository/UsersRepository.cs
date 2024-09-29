@@ -29,25 +29,26 @@ namespace Server.Repository
         }
         public async Task<bool> AddUser(SignupUserModel signupUser)
         {
-            //var userNameExist = await _userManager.FindByNameAsync(signupUser.UserName);
-            //if (userNameExist != null)
-            //{
-            //    return false;
-            //}
+            var userNameExist = await _userManager.FindByEmailAsync(signupUser.Email);
+            if (userNameExist != null)
+            {
+                return false;
+            }
 
-            //UserModel user = new()
-            //{
-            //    UserName = signupUser.UserName,
-            //    Email = signupUser.Email,
-            //    Admin = false,
-            //    Cart = new List<CartItemModel>(),
-            //};
+            UserModel user = new()
+            {
+                UserName = signupUser.Email,
+                Email = signupUser.Email,
+                FirstName = signupUser.FirstName,
+                LastName = signupUser .LastName,
+                PhoneNumber = signupUser.PhoneNumber,
+            };
 
-            //var result = await _userManager.CreateAsync(user, signupUser.Password);
-            //if (result.Succeeded)
-            //{
-            //    return true;
-            //}
+            var result = await _userManager.CreateAsync(user, signupUser.Password);
+            if (result.Succeeded)
+            {
+                return true;
+            }
             return false;
         }
 
@@ -76,43 +77,50 @@ namespace Server.Repository
             //var passwordToken = await _userManager.GeneratePasswordResetTokenAsync(userFromServer);
             //var result = await _userManager.ResetPasswordAsync(userFromServer, passwordToken, editUser.Password);
 
-            //if (!result.Succeeded) return false;
+            //if (!result.Succeeded)
+            return false;
 
             //await _userManager.UpdateAsync(userFromServer);
 
-            return true;
+            //return true;
         }
 
         public async Task<UserDTO> GetUser(string userId)
         {
-            //var user = await _userManager.FindByIdAsync(userId);
-            //if (user == null)
-            //{
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
                 return null;
-            //}
-            //var userDTO = new UserDTO
-            //{
-            //    id = user.Id,
-            //    email = user.Email,
-            //    username = user.UserName,
-            //    admin = user.Admin,
-            //    cart = user.Cart
-            //};
-
-            //return userDTO;
+            }
+            var userDTO = new UserDTO
+            {
+                Id = user.Id,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Bday  = user.Bday,
+                City = user.City,
+                Street = user.Street,
+                StreetNumber = user.StreetNumber,
+                ProfilePic = user.ProfilePic,
+                RealestateRent = user.RealestateRent,
+                RealestateForsale = user.RealestateForsale,
+                UserFavorite = user.UserFavorite
+                };
+            return userDTO;
         }
 
         public async Task<string> LoginUser(LoginUserModel user)
         {
-            //var result = await _signInManager.PasswordSignInAsync(user.UserName, user.Password, false, false);
-            //if (!result.Succeeded)
-            //  {
-                  return null;
-            //  }
-            //var userFromServer = await _userManager.FindByNameAsync(user.UserName);
-        
-            //string token = _utilityFunctions.GenerateJwtToken(userFromServer.Id);
-            //return token;
+            var result = await _signInManager.PasswordSignInAsync(user.Email, user.Password, false, false);
+            if (!result.Succeeded)
+            {
+                return null;
+            }
+            var userFromServer = await _userManager.FindByEmailAsync(user.Email);
+
+            string token = _utilityFunctions.GenerateJwtToken(userFromServer.Id);
+            return token;
         }
     }
 }

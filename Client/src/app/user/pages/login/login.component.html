@@ -2,7 +2,7 @@
   <div class="login-grid">
     <header class="login-header" routerLink="">
       <a class="main-logo" routerLink=""
-        ><img src="logo-secondhand.jpg" alt="Yad2" width="72"
+        ><img src="images/login/logo.svg" alt="Yad2" width="72"
       /></a>
     </header>
     <main class="main-content">
@@ -10,15 +10,12 @@
       <div class="container">
         <section class="login-box">
           <div class="login-box-main">
-            <form data-testid="common-form" class="common-form" novalidate="">
-              <div class="title-medium">היי, טוב לראות אותך</div>
-              <ul class="common-form-list">
-                <li class="common-form-item">
-                  <label class="label top-label" for="email">
-                    <span class="icon y2i_Done u-hide" aria-hidden="true">
-                    </span>
-                    <span class="title-extra-small">מייל</span>
-                  </label>
+            <!--   [formGroup]="form" (ngSubmit)="handleSubmit()"-->
+            <form class="common-form">
+              <div class="form-title">היי, טוב לראות אותך</div>
+              <div class="form-inputs">
+                <label class="label" for="email">
+                  <span class="input-title">מייל</span>
                   <div class="input-text">
                     <input
                       class="direction-ltr"
@@ -29,11 +26,9 @@
                       value=""
                     />
                   </div>
-                </li>
-                <li class="common-form-item">
-                  <label class="label" for="password">
-                    <span class="title-extra-small">סיסמה</span>
-                  </label>
+                </label>
+                <label class="label" for="password">
+                  <span class="input-title">סיסמה</span>
                   <div class="input-text">
                     <input
                       class="direction-ltr"
@@ -44,16 +39,11 @@
                       value=""
                     />
                   </div>
-                  <div class="u-flex u-justify-end">
-                    <a
-                      class="common-link u-margin-top-20"
-                      data-testid="reset-password"
-                      href="/auth/reset-password"
-                      >שכחתי סיסמה</a
-                    >
-                  </div>
-                </li>
-              </ul>
+                </label>
+                <div class="forgot-password">
+                  <div>שכחתי סיסמה</div>
+                </div>
+              </div>
               <div class="submit-and-errors">
                 <button
                   type="submit"
@@ -67,10 +57,10 @@
               <div class="buttons-container">
                 <button
                   type="button"
-                  class="common-button is-quarterly is-full-width is-rounded u-margin-top-5"
+                  class="social-button"
                 >
-                  <span class="u-margin-left-3 u-margin-top-3"
-                    ><svg
+                  <span>
+                    <svg
                       width="26px"
                       height="26px"
                       viewBox="0 0 26 26"
@@ -112,13 +102,12 @@
                           ></path>
                         </g>
                       </g></svg></span
-                  ><span class="text">גוגל</span></button
-                ><button
+                  ><span class="text">גוגל</span></button>
+                <button
                   type="button"
-                  class="common-button is-quarterly is-full-width is-rounded u-margin-top-5"
+                  class="social-button"
                 >
-                  <span class="u-margin-left-3 u-margin-top-3"
-                    ><svg
+                  <span><svg
                       width="26px"
                       height="26px"
                       viewBox="0 0 842 1220"
@@ -130,15 +119,13 @@
                   ><span class="text">אפל</span>
                 </button>
               </div>
-              <p class="u-center-text u-margin-top-30 title-extra-small">
-                אין לך חשבון?&nbsp;<a
-                  class="common-link"
-                  data-testid="register"
-                  href="/auth/register"
-                  >להרשמה</a
+              <p class="no-acount">
+                אין לך חשבון?
+                <a class="common-link" href="">להרשמה</a
                 >
               </p>
             </form>
+            <!--  -->
           </div>
         </section>
         <section class="login-info">

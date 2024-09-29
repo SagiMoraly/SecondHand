@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "BookStoreAPI.Controllers.UserController",
+    "ContainingType": "Server.Controllers.UserController",
     "Method": "GetUser",
     "RelativePath": "api/User",
     "HttpMethod": "GET",
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "ContainingType": "BookStoreAPI.Controllers.UserController",
+    "ContainingType": "Server.Controllers.UserController",
     "Method": "AddUser",
     "RelativePath": "api/User",
     "HttpMethod": "POST",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "ContainingType": "BookStoreAPI.Controllers.UserController",
+    "ContainingType": "Server.Controllers.UserController",
     "Method": "EditUser",
     "RelativePath": "api/User",
     "HttpMethod": "PUT",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "ContainingType": "BookStoreAPI.Controllers.UserController",
+    "ContainingType": "Server.Controllers.UserController",
     "Method": "DeleteUser",
     "RelativePath": "api/User",
     "HttpMethod": "DELETE",
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "ContainingType": "BookStoreAPI.Controllers.UserController",
+    "ContainingType": "Server.Controllers.UserController",
     "Method": "LoginUser",
     "RelativePath": "api/User/login",
     "HttpMethod": "POST",

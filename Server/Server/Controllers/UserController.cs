@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
-namespace BookStoreAPI.Controllers
+namespace Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -41,7 +41,7 @@ namespace BookStoreAPI.Controllers
             var result = await _usersRepository.AddUser(user);
             if (!result)
             {
-                return BadRequest("UserName Is Taken");
+                return BadRequest("Email Is Taken");
             }
             return Ok(result);
         }

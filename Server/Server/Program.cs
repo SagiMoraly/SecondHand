@@ -7,6 +7,7 @@ using Server.Models;
 using Server.Data;
 using Server.IRepository;
 using Server.Repository;
+using Server.Utilitys;
 
 // => webaplication
 var builder = WebApplication.CreateBuilder(args);
@@ -20,9 +21,10 @@ builder.Services.AddDbContext<DbSecondHandContext>(
 //Identity framwork
 builder.Services.AddIdentity<UserModel, IdentityRole>(o =>
 {
+    o.User.RequireUniqueEmail = true;
     o.Password.RequiredUniqueChars = 0;
-    o.Password.RequireLowercase = true;
-    o.Password.RequireUppercase = true;
+    o.Password.RequireLowercase = false;
+    o.Password.RequireUppercase = false;
     o.Password.RequireDigit = true;
     o.Password.RequireNonAlphanumeric = false;
     o.Password.RequiredLength = 8;
@@ -54,10 +56,10 @@ builder.Services.AddControllers().AddNewtonsoftJson(opt =>
 }
     );
 // implament the repositories
-//builder.Services.AddTransient<IUsersRepository, UsersRepository>();
+builder.Services.AddTransient<IUsersRepository, UsersRepository>();
 //builder.Services.AddTransient<IBooksRepository, BooksRepository>();
 //builder.Services.AddTransient<ICartsRepository, CartsRepository>();
-//builder.Services.AddSingleton<UtilitysFunctions, UtilitysFunctions>();
+builder.Services.AddSingleton<UtilitysFunctions, UtilitysFunctions>();
 // swagers
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
