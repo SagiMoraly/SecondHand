@@ -10,14 +10,19 @@
       <div class="container">
         <section class="login-box">
           <div class="login-box-main">
-            <!--   [formGroup]="form" (ngSubmit)="handleSubmit()"-->
-            <form class="common-form">
+            <!--  "-->
+            <form
+              class="common-form"
+              [formGroup]="form"
+              (ngSubmit)="onSubmit()"
+            >
               <div class="form-title">היי, טוב לראות אותך</div>
               <div class="form-inputs">
                 <label class="label" for="email">
                   <span class="input-title">מייל</span>
                   <div class="input-text">
                     <input
+                      formControlName="email"
                       class="direction-ltr"
                       type="email"
                       id="email"
@@ -31,6 +36,7 @@
                   <span class="input-title">סיסמה</span>
                   <div class="input-text">
                     <input
+                      formControlName="password"
                       class="direction-ltr"
                       type="password"
                       id="password"
@@ -55,10 +61,7 @@
               </div>
               <div class="text-separation">או התחברו דרך</div>
               <div class="buttons-container">
-                <button
-                  type="button"
-                  class="social-button"
-                >
+                <button type="button" class="social-button">
                   <span>
                     <svg
                       width="26px"
@@ -102,12 +105,11 @@
                           ></path>
                         </g>
                       </g></svg></span
-                  ><span class="text">גוגל</span></button>
-                <button
-                  type="button"
-                  class="social-button"
-                >
-                  <span><svg
+                  ><span class="text">גוגל</span>
+                </button>
+                <button type="button" class="social-button">
+                  <span
+                    ><svg
                       width="26px"
                       height="26px"
                       viewBox="0 0 842 1220"
@@ -121,8 +123,7 @@
               </div>
               <p class="no-acount">
                 אין לך חשבון?
-                <a class="common-link" href="">להרשמה</a
-                >
+                <a class="common-link" href="">להרשמה</a>
               </p>
             </form>
             <!--  -->
