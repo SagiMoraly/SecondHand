@@ -6,9 +6,11 @@
       /></a>
     </header>
     <main class="main-content">
-      <a routerLink="*"><span>כניסה למתווכים</span></a>
       <div class="container">
         <section class="login-box">
+          <div class="off-enter" routerLink="*">
+            <span>כניסה למתווכים</span>
+          </div>
           <div class="login-box-main">
             <!--  "-->
             <form
@@ -22,8 +24,10 @@
                   <span class="input-title">מייל</span>
                   <div class="input-text">
                     <input
+                      (input)="resetSubmited()"
                       formControlName="email"
                       class="direction-ltr"
+                      [ngClass]="email?.invalid && submited ? 'error-border' : ''"
                       type="email"
                       id="email"
                       placeholder="yourmail@email.co.il"
@@ -31,19 +35,32 @@
                       value=""
                     />
                   </div>
+                  <div class="error" *ngIf="email?.invalid && submited">
+                    <div [hidden]="!email?.errors?.['required']">
+                      לא לשכוח את המייל
+                    </div>
+                    <div [hidden]="!email?.errors?.['email']">
+                      {{"משהו לא תקין במייל, אולי התפספס @?"}}
+                    </div>
+                  </div>
                 </label>
                 <label class="label" for="password">
                   <span class="input-title">סיסמה</span>
                   <div class="input-text">
                     <input
+                      (input)="resetSubmited()"
                       formControlName="password"
                       class="direction-ltr"
+                      [ngClass]="password?.invalid && submited ? 'error-border' : ''"
                       type="password"
                       id="password"
                       placeholder="הקלדת סיסמה"
                       autocomplete="on"
                       value=""
                     />
+                  </div>
+                  <div class="error" *ngIf="password?.invalid && submited">
+                    לא לשכוח להזין סיסמה
                   </div>
                 </label>
                 <div class="forgot-password">
@@ -123,7 +140,7 @@
               </div>
               <p class="no-acount">
                 אין לך חשבון?
-                <a class="common-link" href="">להרשמה</a>
+                <a class="common-link" routerLink="/signup">להרשמה</a>
               </p>
             </form>
             <!--  -->
@@ -135,32 +152,32 @@
               >ויש לנו אחלה כלים לזה.</span
             ><br />
           </h1>
-          <ul class="login-features u-margin-top-40">
+          <ul class="login-features">
             <li class="login-features-item">
               <img
                 class="login-features-image"
-                src="https://assets.yad2.co.il/login/icon_alert.svg"
+                src="images/login/icon_alert.svg"
                 alt=""
               /><span class="text">התראות</span>
             </li>
             <li class="login-features-item">
               <img
                 class="login-features-image"
-                src="https://assets.yad2.co.il/login/icon_chat.svg"
+                src="images/login/icon_chat.svg"
                 alt=""
               /><span class="text">צ׳אט</span>
             </li>
             <li class="login-features-item">
               <img
                 class="login-features-image"
-                src="https://assets.yad2.co.il/login/icon_publish.svg"
+                src="images/login/icon_publish.svg"
                 alt=""
               /><span class="text">פרסום מודעה</span>
             </li>
             <li class="login-features-item">
               <img
                 class="login-features-image"
-                src="https://assets.yad2.co.il/login/icon_profile.svg"
+                src="images/login/icon_profile.svg"
                 alt=""
               /><span class="text">אזור אישי</span>
             </li>

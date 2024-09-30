@@ -1,1 +1,233 @@
-<p>signup works!</p>
+<div class="common-structure">
+    <div class="login-grid">
+      <header class="login-header" routerLink="">
+        <a class="main-logo" routerLink=""
+          ><img src="images/login/logo.svg" alt="Yad2" width="72"
+        /></a>
+      </header>
+      <main class="main-content">
+        <div class="container">
+          <section class="login-box">
+            <div class="login-box-main">
+              <!--  "-->
+              <form
+                class="common-form"
+                [formGroup]="form"
+                (ngSubmit)="onSubmit()"
+              >
+                <div class="form-title">היי, נעים להכיר</div>
+                <div class="form-inputs">
+                  <label class="label" for="email">
+                    <span class="input-title">מייל</span>
+                    <div class="input-text">
+                      <input
+                        (input)="resetSubmited()"
+                        formControlName="email"
+                        class="direction-ltr"
+                        [ngClass]="email?.invalid && submited ? 'error-border' : ''"
+                        type="email"
+                        id="email"
+                        placeholder="yourmail@email.co.il"
+                        autocomplete="on"
+                        value=""
+                      />
+                    </div>
+                    <div class="error" *ngIf="email?.invalid && submited">
+                      <div [hidden]="!email?.errors?.['required']">
+                        לא לשכוח את המייל
+                      </div>
+                      <div [hidden]="!email?.errors?.['email']">
+                        {{"משהו לא תקין במייל, אולי התפספס @?"}}
+                      </div>
+                    </div>
+                  </label>
+                  <label class="label" for="password">
+                    <span class="input-title">סיסמה</span>
+                    <div class="input-text">
+                      <div [hidden]="!showPasswordReq" class="password-requierments">
+                        <h4 class="popover-validation-title">הסיסמה צריכה לכלול:</h4>
+                        <div>
+                          <span class="check-list-img" [hidden]="((password?.errors?.['minlength'] || password?.errors?.['maxlength']) || password?.errors?.['required'])">
+                            <svg  width="16px" height="16px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#0e9c64"></path> <path d="M16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#0e9c64"></path> </g></svg>
+                          </span>
+                          <span class="check-list-img" [hidden]="((!password?.errors?.['minlength'] && !password?.errors?.['maxlength']) && !password?.errors?.['required'])">
+                            <svg  width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.4" d="M11.9707 22C17.4936 22 21.9707 17.5228 21.9707 12C21.9707 6.47715 17.4936 2 11.9707 2C6.44786 2 1.9707 6.47715 1.9707 12C1.9707 17.5228 6.44786 22 11.9707 22Z" fill="#ababab"></path> <path d="M11.9995 16.23C14.3357 16.23 16.2295 14.3362 16.2295 12C16.2295 9.66386 14.3357 7.77002 11.9995 7.77002C9.66337 7.77002 7.76953 9.66386 7.76953 12C7.76953 14.3362 9.66337 16.23 11.9995 16.23Z" fill="#ababab"></path> </g></svg>
+                          </span>
+                          <span>8-20 תווים</span>
+                        </div>
+                        <div>
+                          <span class="check-list-img" [hidden]="(password?.errors?.['pattern'] || password?.errors?.['required'])">
+                            <svg  width="16px" height="16px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#0e9c64"></path> <path d="M16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z" fill="#0e9c64"></path> </g></svg>
+                          </span>
+                          <span class="check-list-img" [hidden]="(!password?.errors?.['pattern'] && !password?.errors?.['required'])">
+                            <svg  width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.4" d="M11.9707 22C17.4936 22 21.9707 17.5228 21.9707 12C21.9707 6.47715 17.4936 2 11.9707 2C6.44786 2 1.9707 6.47715 1.9707 12C1.9707 17.5228 6.44786 22 11.9707 22Z" fill="#ababab"></path> <path d="M11.9995 16.23C14.3357 16.23 16.2295 14.3362 16.2295 12C16.2295 9.66386 14.3357 7.77002 11.9995 7.77002C9.66337 7.77002 7.76953 9.66386 7.76953 12C7.76953 14.3362 9.66337 16.23 11.9995 16.23Z" fill="#ababab"></path> </g></svg>
+                          </span>
+                          <span>אותיות באנגלית ומספרים</span>
+                        </div>
+                      </div>
+                      <input
+                        (input)="resetSubmited()"
+                        (focus)="showPasswordReq = true"
+                        (blur)="showPasswordReq = false"
+                        formControlName="password"
+                        class="direction-ltr"
+                        [ngClass]="password?.invalid && submited ? 'error-border' : ''"
+                        type="password"
+                        id="password"
+                        placeholder="הקלדת סיסמה"
+                        autocomplete="on"
+                        value=""
+                      />
+                    </div>
+
+                  </label>
+                  <label class="label" for="passwordConfirm">
+                    <span class="input-title">אימות סיסמה</span>
+                    <div class="input-text">
+                      <input
+                        (input)="resetSubmited()"
+                        formControlName="passwordConfirm"
+                        class="direction-ltr"
+                        [ngClass]="passwordConfirm?.invalid && submited ? 'error-border' : ''"
+                        type="password"
+                        id="passwordConfirm"
+                        placeholder="הקלדת סיסמה"
+                        autocomplete="on"
+                        value=""
+                      />
+                    </div>
+                    <div class="error" *ngIf="(password?.invalid || passwordConfirm?.invalid) && submited">
+                      <div [hidden]="(!password?.errors?.['required'] && !passwordConfirm?.errors?.['required'])">
+                        לא לשכוח להזין סיסמה
+                      </div>
+                      <div [hidden]="!passwordConfirm?.errors?.['passwordMatchError']">
+                        הסיסמאות לא זהות
+                      </div>
+                      <div [hidden]="!password?.errors?.['pattern']">
+                        נבקש שהסיסמה תכלול אותיות באנגלית וספרות
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="submit-and-errors">
+                  <button
+                    type="submit"
+                    class="submit-custom-button"
+                    data-testid="submit"
+                  >
+                    <span class="text">התחברות</span>
+                  </button>
+                </div>
+                <div class="text-separation">או התחברו דרך</div>
+                <div class="buttons-container">
+                  <button type="button" class="social-button">
+                    <span>
+                      <svg
+                        width="26px"
+                        height="26px"
+                        viewBox="0 0 26 26"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>google</title>
+                        <g
+                          id="google"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="evenodd"
+                        >
+                          <g
+                            id="icons8-google"
+                            transform="translate(4.000000, 4.000000)"
+                            fill-rule="nonzero"
+                          >
+                            <path
+                              d="M17.82495,7.23735 L17.1,7.23735 L17.1,7.2 L9,7.2 L9,10.8 L14.08635,10.8 C13.3443,12.89565 11.35035,14.4 9,14.4 C6.01785,14.4 3.6,11.98215 3.6,9 C3.6,6.01785 6.01785,3.6 9,3.6 C10.37655,3.6 11.6289,4.1193 12.58245,4.96755 L15.1281,2.4219 C13.5207,0.92385 11.3706,0 9,0 C4.02975,0 0,4.02975 0,9 C0,13.97025 4.02975,18 9,18 C13.97025,18 18,13.97025 18,9 C18,8.39655 17.9379,7.8075 17.82495,7.23735 Z"
+                              id="Path"
+                              fill="#FFC107"
+                            ></path>
+                            <path
+                              d="M1.0377,4.81095 L3.99465,6.9795 C4.79475,4.9986 6.73245,3.6 9,3.6 C10.37655,3.6 11.6289,4.1193 12.58245,4.96755 L15.1281,2.4219 C13.5207,0.92385 11.3706,0 9,0 C5.5431,0 2.5452,1.95165 1.0377,4.81095 Z"
+                              id="Path"
+                              fill="#FF3D00"
+                            ></path>
+                            <path
+                              d="M9,18 C11.3247,18 13.437,17.11035 15.03405,15.6636 L12.24855,13.3065 C11.34495,13.99095 10.22175,14.4 9,14.4 C6.6591,14.4 4.67145,12.90735 3.92265,10.8243 L0.98775,13.08555 C2.47725,16.0002 5.50215,18 9,18 Z"
+                              id="Path"
+                              fill="#4CAF50"
+                            ></path>
+                            <path
+                              d="M17.82495,7.23735 L17.1,7.23735 L17.1,7.2 L9,7.2 L9,10.8 L14.08635,10.8 C13.72995,11.80665 13.0824,12.6747 12.2472,13.30695 C12.24765,13.3065 12.2481,13.3065 12.24855,13.30605 L15.03405,15.66315 C14.83695,15.84225 18,13.5 18,9 C18,8.39655 17.9379,7.8075 17.82495,7.23735 Z"
+                              id="Path"
+                              fill="#1976D2"
+                            ></path>
+                          </g>
+                        </g></svg></span
+                    ><span class="text">גוגל</span>
+                  </button>
+                  <button type="button" class="social-button">
+                    <span
+                      ><svg
+                        width="26px"
+                        height="26px"
+                        viewBox="0 0 842 1220"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M702 960c-54.2 52.6-114 44.4-171 19.6-60.6-25.3-116-26.9-180 0-79.7 34.4-122 24.4-170-19.6-271-279-231-704 77-720 74.7 4 127 41.3 171 44.4 65.4-13.3 128-51.4 198-46.4 84.1 6.8 147 40 189 99.7-173 104-132 332 26.9 396-31.8 83.5-72.6 166-141 227zM423 237C414.9 113 515.4 11 631 1c15.9 143-130 250-208 236z"
+                        ></path></svg></span
+                    ><span class="text">אפל</span>
+                  </button>
+                </div>
+                <p class="no-acount">
+                  כבר יש לך חשבון? 
+                  <a class="common-link" routerLink="/login">להתחברות</a>
+                </p>
+              </form>
+              <!--  -->
+            </div>
+          </section>
+          <section class="login-info">
+            <h1 class="title-large">
+              <span>לקנות מהר, למכור מהר.</span><br /><span
+                >ויש לנו אחלה כלים לזה.</span
+              ><br />
+            </h1>
+            <ul class="login-features">
+              <li class="login-features-item">
+                <img
+                  class="login-features-image"
+                  src="images/login/icon_alert.svg"
+                  alt=""
+                /><span class="text">התראות</span>
+              </li>
+              <li class="login-features-item">
+                <img
+                  class="login-features-image"
+                  src="images/login/icon_chat.svg"
+                  alt=""
+                /><span class="text">צ׳אט</span>
+              </li>
+              <li class="login-features-item">
+                <img
+                  class="login-features-image"
+                  src="images/login/icon_publish.svg"
+                  alt=""
+                /><span class="text">פרסום מודעה</span>
+              </li>
+              <li class="login-features-item">
+                <img
+                  class="login-features-image"
+                  src="images/login/icon_profile.svg"
+                  alt=""
+                /><span class="text">אזור אישי</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+      <footer class="login-footer u-only-desktop"></footer>
+    </div>
+  </div>
+  

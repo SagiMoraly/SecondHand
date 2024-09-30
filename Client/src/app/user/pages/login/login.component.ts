@@ -9,15 +9,30 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private destroyRef: DestroyRef) {}
   form!: FormGroup;
+  submited = false
   ngOnInit(): void {
-    // this.fb.group({email:["",]}).addControl("Email", this.fb.control(""))
     this.form = this.fb.group({
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required,Validators.email]],
       password: ['', [Validators.required]],
     });
   }
 
+  get email() {
+    return this.form.get('email');
+  }
+
+  get password() {
+    return this.form.get('password');
+  }
+
+  resetSubmited(){  
+    this.submited = false
+  }
+
   onSubmit() {
+    this.submited = true
+    console.log(this.email?.errors);
     console.log(this.form.value);
   }
+
 }
