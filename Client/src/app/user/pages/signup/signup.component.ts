@@ -1,26 +1,44 @@
 import { AfterViewInit, Component, DestroyRef, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  ValidationErrors,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.scss'
+  styleUrl: './signup.component.scss',
 })
-export class SignupComponent  implements OnInit ,AfterViewInit{
+export class SignupComponent implements OnInit, AfterViewInit {
   constructor(private fb: FormBuilder, private destroyRef: DestroyRef) {}
   form!: FormGroup;
-  showPasswordReq = false
-  submited = false
+  showPasswordReq = false;
+  submited = false;
   ngOnInit(): void {
-    this.form = this.fb.group({
-      email: ['', [Validators.required,Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8),Validators.maxLength(20),Validators.pattern(/(?=.*\d)(?=.*[a-zA-Z])/)]],
-      passwordConfirm: ['', [Validators.required]]
-    });
+    this.form = this.fb.group(
+      {
+        email: ['', [Validators.required, Validators.email]],
+        password: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(8),
+            Validators.maxLength(20),
+            Validators.pattern(/(?=.*\d)(?=.*[a-zA-Z])/),
+          ],
+        ],
+        passwordConfirm: ['', [Validators.required]],
+      },
+      { validators: this.PasswordMatchValidator }
+    );
   }
 
   ngAfterViewInit(): void {
-    this.passwordConfirm?.addValidators(this.PasswordMatchValidator)
+    // this.passwordConfirm?.addValidators(this.PasswordMatchValidator);
   }
 
   get email() {
@@ -32,25 +50,34 @@ export class SignupComponent  implements OnInit ,AfterViewInit{
   }
 
   get passwordConfirm() {
-    return this.form.get('passwordConfirm')
+    return this.form.get('passwordConfirm');
   }
 
-  resetSubmited(){  
-    this.submited = false
+  resetSubmited() {
+    this.submited = false;
   }
 
-  PasswordMatchValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
-    if (this.password?.value !== this.passwordConfirm?.value) {
+  PasswordMatchValidator: ValidatorFn = (
+    control: AbstractControl
+  ): ValidationErrors | null => {
+    const password = control.get('password');
+    const passwordConfirm = control.get('passwordConfirm');
+
+    // console.log(this.form.get('password'), this.form.get('passwordConfirm'));
+
+    if (password?.value !== passwordConfirm?.value) {
       return { passwordMatchError: true };
     }
     return null;
   };
 
   onSubmit() {
-    this.submited = true
+    this.submited = true;
+
+    this.form.updateValueAndValidity();
+
     console.log(this.form);
 
     console.log(this.form.value);
   }
-
 }
