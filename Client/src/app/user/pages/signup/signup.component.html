@@ -11,8 +11,9 @@
           <div class="login-box-main">
             <!--  "-->
             <form
+              [hidden]="!(stage == 1)"
               class="common-form"
-              [formGroup]="form"
+              [formGroup]="formStage1"
               (ngSubmit)="onSubmit()"
             >
               <div class="form-title">היי, נעים להכיר</div>
@@ -322,6 +323,115 @@
                 כבר יש לך חשבון?
                 <a class="common-link" routerLink="/login">להתחברות</a>
               </p>
+            </form>
+            <!--  -->
+            <form
+              [hidden]="!(stage == 2)"
+              class="common-form"
+              [formGroup]="formStage2"
+              (ngSubmit)="onSubmit()"
+            >
+              <div class="form-title">היי, נעים להכיר</div>
+              <div class="form-inputs">
+                <label class="label" for="firstName">
+                  <span class="input-title">שם פרטי*</span>
+                  <div class="input-text">
+                    <input
+                      (input)="resetSubmited()"
+                      formControlName="firstName"
+                      class="direction-ltr"
+                      [ngClass]="
+                        firstName?.invalid && submited ? 'error-border' : ''
+                      "
+                      type="firstName"
+                      id="firstName"
+                      placeholder="הקלדת שם פרטי"
+                      autocomplete="on"
+                      value=""
+                    />
+                  </div>
+                  <div class="error" *ngIf="firstName?.invalid && submited">
+                    <div [hidden]="!firstName?.errors?.['required']">
+                      לא לשכוח את השם
+                    </div>
+                    <div [hidden]="!firstName?.errors?.['minlength']">
+                      {{ "שם עם אות אחת? זה שיא גינס" }}
+                    </div>
+                  </div>
+                </label>
+                <label class="label" for="lastName">
+                  <span class="input-title">שם פרטי*</span>
+                  <div class="input-text">
+                    <input
+                      (input)="resetSubmited()"
+                      formControlName="lastName"
+                      class="direction-ltr"
+                      [ngClass]="
+                        lastName?.invalid && submited ? 'error-border' : ''
+                      "
+                      type="lastName"
+                      id="lastName"
+                      placeholder="הקלדת שם משפחה"
+                      autocomplete="on"
+                      value=""
+                    />
+                  </div>
+                  <div class="error" *ngIf="lastName?.invalid && submited">
+                    <div [hidden]="!lastName?.errors?.['required']">
+                      לא לשכוח את השם משפחה
+                    </div>
+                    <div [hidden]="!lastName?.errors?.['minlength']">
+                      {{ "שם משפחה עם אות אחת? זה שיא גינס" }}
+                    </div>
+                  </div>
+                </label>
+                <label class="label" for="phoneNumber">
+                  <span class="input-title">שם פרטי*</span>
+                  <div class="input-text">
+                    <input
+                      (input)="resetSubmited()"
+                      formControlName="phoneNumber"
+                      class="direction-ltr"
+                      [ngClass]="
+                        phoneNumber?.invalid && submited ? 'error-border' : ''
+                      "
+                      type="phone"
+                      id="phoneNumber"
+                      placeholder="מספר נייד"
+                      autocomplete="on"
+                      value=""
+                    />
+                  </div>
+                  <div class="error" *ngIf="phoneNumber?.invalid && submited">
+                    <div [hidden]="!phoneNumber?.errors?.['required']">
+                      הייץ לא לשכוח למלא מספר טלפון
+                    </div>
+                    <div [hidden]="!phoneNumber?.errors?.['minlength'] && !phoneNumber?.errors?.['maxlength']">
+                      {{ "מספר טלפון לא תקין" }}
+                    </div>
+                  </div>
+                </label>
+                <label>
+                  <input type="checkbox" formControlName="terms">
+                  <span>קראתי ואישרתי את</span>
+                  <span >{{" תקנון "}}</span>
+                  <span>האתר*</span>
+                </label>
+                <label>
+                  <input type="checkbox">
+                  <span>אני מאשר.ת קבלת תוכן שיווקי מיד2 ו.או מצדדים שלישיים באמצעי הקשר שמסרתי (גם בשירותי דיוור ישיר)</span>
+                </label>
+                
+              </div>
+              <div class="submit-and-errors">
+                <button
+                  type="submit"
+                  class="submit-custom-button"
+                  data-testid="submit"
+                >
+                  <span class="text">סיום הרשמה</span>
+                </button>
+              </div>
             </form>
             <!--  -->
           </div>

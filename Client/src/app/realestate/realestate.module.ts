@@ -10,6 +10,7 @@ import { AutocompleteComponent } from './components/autocomplete/autocomplete.co
 import { RangeSliderComponent } from './components/range-slider/range-slider.component';
 import { SharedModule } from '../shared/shared.module';
 import { MultiSelectComponent } from './components/multi-select/multi-select.component';
+import { RoomSelectionComponent } from './components/room-selection/room-selection.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MultiSelectComponent } from './components/multi-select/multi-select.com
     AutocompleteComponent,
     RangeSliderComponent,
     MultiSelectComponent,
+    RoomSelectionComponent,
   ],
   imports: [CommonModule, SharedModule],
 })

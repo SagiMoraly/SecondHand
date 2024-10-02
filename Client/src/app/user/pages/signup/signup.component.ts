@@ -15,11 +15,13 @@ import {
 })
 export class SignupComponent implements OnInit, AfterViewInit {
   constructor(private fb: FormBuilder, private destroyRef: DestroyRef) {}
-  form!: FormGroup;
+  formStage1!: FormGroup;
+  formStage2!: FormGroup;
   showPasswordReq = false;
   submited = false;
+  stage = 1
   ngOnInit(): void {
-    this.form = this.fb.group(
+    this.formStage1 = this.fb.group(
       {
         email: ['', [Validators.required, Validators.email]],
         password: [
@@ -35,6 +37,13 @@ export class SignupComponent implements OnInit, AfterViewInit {
       },
       { validators: this.PasswordMatchValidator }
     );
+
+    this.formStage2 = this.fb.group({
+      firstName: ['',[Validators.required, Validators.minLength(2)]],
+      lastName: ['', [Validators.required, Validators.minLength(2)]],
+      phoneNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10) , Validators.pattern(/^\d+$/)]],
+      terms: [false, Validators.requiredTrue],
+    })
   }
 
   ngAfterViewInit(): void {
@@ -42,15 +51,31 @@ export class SignupComponent implements OnInit, AfterViewInit {
   }
 
   get email() {
-    return this.form.get('email');
+    return this.formStage1.get('email');
   }
 
   get password() {
-    return this.form.get('password');
+    return this.formStage1.get('password');
   }
 
   get passwordConfirm() {
-    return this.form.get('passwordConfirm');
+    return this.formStage1.get('passwordConfirm');
+  }
+
+  get firstName() {
+    return this.formStage1.get('firstName');
+  }
+
+  get lastName() {
+    return this.formStage1.get('lastName');
+  }
+
+  get phoneNumber() {
+    return this.formStage1.get('phoneNumber');
+  }
+
+  get terms() {
+    return this.formStage1.get('terms');
   }
 
   resetSubmited() {
@@ -74,10 +99,13 @@ export class SignupComponent implements OnInit, AfterViewInit {
   onSubmit() {
     this.submited = true;
 
-    this.form.updateValueAndValidity();
+    this.formStage1.updateValueAndValidity();
 
-    console.log(this.form);
+    console.log(this.formStage1);
 
-    console.log(this.form.value);
+    console.log(this.formStage1.valid);
+    this.stage = 2
+    console.log(this.stage);
+    
   }
 }

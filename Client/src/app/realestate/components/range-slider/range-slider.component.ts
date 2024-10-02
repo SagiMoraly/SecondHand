@@ -38,3 +38,5 @@ export class RangeSliderComponent {
     return ((maxValue - minValue) / (options.ceil - options.floor)) * 100;
   }
 }
+
+  

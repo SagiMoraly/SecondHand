@@ -98,9 +98,11 @@
         ></path>
       </svg>
     </div>
-    <div *ngIf="showRooms" class="type-property dialog">
-      <div>placement</div>
-      <div>placement</div>
+    <!-- showRooms -->
+    <div [hidden]="showRooms" class="type-property dialog">
+      <!-- <div>placement</div>
+      <div>placement</div> -->
+      <app-room-selection (click)="clickInDialog($event)"></app-room-selection>
     </div>
   </div>
   <div class="dialog-button">

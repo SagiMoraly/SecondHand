@@ -1,0 +1,8 @@
+<div class="rooms-selection-container">
+    <div (click)="selectRoom(i)" class="room-button" [ngClass]="room.style" *ngFor="let room of roomListObj; let i = index">
+        <span>
+            {{room.name}}
+        </span>
+    </div>
+</div>
+
