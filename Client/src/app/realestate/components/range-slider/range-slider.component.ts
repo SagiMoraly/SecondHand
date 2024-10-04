@@ -1,3 +1,4 @@
+import { Options } from '@angular-slider/ngx-slider';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,37 +7,48 @@ import { Component } from '@angular/core';
   styleUrl: './range-slider.component.scss',
 })
 export class RangeSliderComponent {
-  noSwitchingSlider = {
-    minValue: 0,
-    maxValue: 20000,
-    options: {
-      floor: 0,
-      ceil: 20000,
-      step: 1000,
-    },
+  minValue: number = 0;
+  maxValue: number = 20000000;
+  inputMin: number | string = '₪0';
+  inputMax: number | string = '₪20,000,000';
+  options: Options = {
+    floor: 0,
+    ceil: 20000000,
+    step: 100000,
+    showTicks: true,
+    rightToLeft: true,
   };
 
-  onMinChange() {
-    if (this.noSwitchingSlider.minValue >= this.noSwitchingSlider.maxValue) {
-      this.noSwitchingSlider.minValue = this.noSwitchingSlider.maxValue - 1;
+  onMinValueChange(num: number) {
+    this.inputMin = this.numberToPriceString(num.toString());
+  }
+
+  onMaxValueChange(num: number) {
+    this.inputMax = this.numberToPriceString(num.toString());
+  }
+
+  numberToPriceString(num: string) {
+    return '₪' + num.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  setMin(event: Event) {
+    const input = (event.target as HTMLInputElement).value;
+    const number = input.replaceAll(',', '').replaceAll('₪', '');
+    this.minValue = Number(number);
+    this.inputMin = this.numberToPriceString(number);
+  }
+
+  setMax(event: Event) {
+    const input = (event.target as HTMLInputElement).value;
+    const number = input.replaceAll(',', '').replaceAll('₪', '');
+    this.maxValue = Number(number);
+    this.inputMax = this.numberToPriceString(number);
+  }
+
+  validateNumberInput(event: KeyboardEvent): void {
+    const charCode = event.keyCode ? event.keyCode : event.which;
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault();
     }
-  }
-
-  onMaxChange() {
-    if (this.noSwitchingSlider.maxValue <= this.noSwitchingSlider.minValue) {
-      this.noSwitchingSlider.maxValue = this.noSwitchingSlider.minValue + 1;
-    }
-  }
-
-  calculateLeftPosition(): number {
-    const { minValue, options } = this.noSwitchingSlider;
-    return ((minValue - options.floor) / (options.ceil - options.floor)) * 100;
-  }
-
-  calculateWidth(): number {
-    const { minValue, maxValue, options } = this.noSwitchingSlider;
-    return ((maxValue - minValue) / (options.ceil - options.floor)) * 100;
   }
 }
-
-  

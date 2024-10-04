@@ -71,8 +71,9 @@
         ></path>
       </svg>
     </div>
+    <!-- showPrice -->
     <div
-      *ngIf="showPrice"
+      *ngIf="true"
       class="type-property dialog"
       (click)="clickInDialog($event)"
     >
@@ -99,7 +100,7 @@
       </svg>
     </div>
     <!-- showRooms -->
-    <div [hidden]="showRooms" class="type-property dialog">
+    <div [hidden]="!showRooms" class="type-property dialog">
       <!-- <div>placement</div>
       <div>placement</div> -->
       <app-room-selection (click)="clickInDialog($event)"></app-room-selection>
