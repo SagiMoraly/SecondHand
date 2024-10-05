@@ -34,15 +34,16 @@ export class RangeSliderComponent {
   setMin(event: Event) {
     const input = (event.target as HTMLInputElement).value;
     const number = input.replaceAll(',', '').replaceAll('₪', '');
-    this.minValue = Number(number);
+    console.log(number);
     this.inputMin = this.numberToPriceString(number);
+    this.minValue = Number(number);
   }
 
   setMax(event: Event) {
     const input = (event.target as HTMLInputElement).value;
     const number = input.replaceAll(',', '').replaceAll('₪', '');
-    this.maxValue = Number(number);
     this.inputMax = this.numberToPriceString(number);
+    this.maxValue = Number(number);
   }
 
   validateNumberInput(event: KeyboardEvent): void {
