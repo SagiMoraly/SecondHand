@@ -14,17 +14,16 @@
               [hidden]="!(stage == 1)"
               class="common-form"
               [formGroup]="formStage1"
-              (ngSubmit)="onSubmit()"
+              (ngSubmit)="onSubmitStage1()"
             >
               <div class="form-title">היי, נעים להכיר</div>
               <div class="form-inputs">
                 <label class="label" for="email">
                   <span class="input-title">מייל</span>
                   <div class="input-text">
-                    <input
+                    <input class="basic-input"
                       (input)="resetSubmited()"
                       formControlName="email"
-                      class="direction-ltr"
                       [ngClass]="
                         email?.invalid && submited ? 'error-border' : ''
                       "
@@ -187,12 +186,11 @@
                         >
                       </div>
                     </div>
-                    <input
+                    <input class="basic-input"
                       (input)="resetSubmited()"
                       (focus)="showPasswordReq = true"
                       (blur)="showPasswordReq = false"
                       formControlName="password"
-                      class="direction-ltr"
                       [ngClass]="
                         password?.invalid && submited ? 'error-border' : ''
                       "
@@ -207,10 +205,9 @@
                 <label class="label" for="passwordConfirm">
                   <span class="input-title">אימות סיסמה</span>
                   <div class="input-text">
-                    <input
+                    <input class="basic-input"
                       (input)="resetSubmited()"
                       formControlName="passwordConfirm"
-                      class="direction-ltr"
                       [ngClass]="
                         passwordConfirm?.invalid && submited
                           ? 'error-border'
@@ -329,17 +326,16 @@
               [hidden]="!(stage == 2)"
               class="common-form"
               [formGroup]="formStage2"
-              (ngSubmit)="onSubmit()"
+              (ngSubmit)="onSubmitStage2()"
             >
               <div class="form-title">היי, נעים להכיר</div>
               <div class="form-inputs">
                 <label class="label" for="firstName">
                   <span class="input-title">שם פרטי*</span>
                   <div class="input-text">
-                    <input
+                    <input class="basic-input"
                       (input)="resetSubmited()"
                       formControlName="firstName"
-                      class="direction-ltr"
                       [ngClass]="
                         firstName?.invalid && submited ? 'error-border' : ''
                       "
@@ -362,10 +358,9 @@
                 <label class="label" for="lastName">
                   <span class="input-title">שם פרטי*</span>
                   <div class="input-text">
-                    <input
+                    <input class="basic-input"
                       (input)="resetSubmited()"
                       formControlName="lastName"
-                      class="direction-ltr"
                       [ngClass]="
                         lastName?.invalid && submited ? 'error-border' : ''
                       "
@@ -388,10 +383,9 @@
                 <label class="label" for="phoneNumber">
                   <span class="input-title">שם פרטי*</span>
                   <div class="input-text">
-                    <input
+                    <input class="basic-input"
                       (input)="resetSubmited()"
                       formControlName="phoneNumber"
-                      class="direction-ltr"
                       [ngClass]="
                         phoneNumber?.invalid && submited ? 'error-border' : ''
                       "
@@ -412,13 +406,13 @@
                   </div>
                 </label>
                 <label>
-                  <input type="checkbox" formControlName="terms">
+                  <input class="chack-box-input" type="checkbox" formControlName="terms">
                   <span>קראתי ואישרתי את</span>
                   <span >{{" תקנון "}}</span>
                   <span>האתר*</span>
                 </label>
                 <label>
-                  <input type="checkbox">
+                  <input class="chack-box-input" type="checkbox">
                   <span>אני מאשר.ת קבלת תוכן שיווקי מיד2 ו.או מצדדים שלישיים באמצעי הקשר שמסרתי (גם בשירותי דיוור ישיר)</span>
                 </label>
                 

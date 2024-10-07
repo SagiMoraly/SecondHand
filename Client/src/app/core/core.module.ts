@@ -7,6 +7,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CoreComponent } from './pages/core/core.component';
 import { AdCardComponent } from './components/ad-card/ad-card.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthorizedInterceptor } from './interceptors/authorized.interceptor';
 
 @NgModule({
   declarations: [
@@ -24,5 +26,8 @@ import { AdCardComponent } from './components/ad-card/ad-card.component';
   ],
   exports: [SharedModule, CoreComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthorizedInterceptor, multi: true }
+  ],
 })
 export class CoreModule {}

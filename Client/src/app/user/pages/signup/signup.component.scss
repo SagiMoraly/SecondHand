@@ -106,7 +106,7 @@
         padding-top: 20px;
         padding-bottom: 5px;
       }
-      input {
+      input.basic-input {
         font-size: 1rem;
         border: 1px solid rgb(204, 204, 204);
         border-radius: 4px;
@@ -118,6 +118,11 @@
         &:focus {
           border: 1px solid rgb(131, 131, 131);
         }
+      }
+      input.chack-box-input{
+        // font-size: 1rem;
+        // height: 0px;
+        // width: 0px;
       }
     }
     .forgot-password {
@@ -240,3 +245,5 @@
     }
   }
 }
+
+

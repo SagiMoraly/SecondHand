@@ -93,6 +93,32 @@
   },
   {
     "ContainingType": "Server.Controllers.UserController",
+    "Method": "EmailExist",
+    "RelativePath": "api/User/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.UserController",
     "Method": "LoginUser",
     "RelativePath": "api/User/login",
     "HttpMethod": "POST",

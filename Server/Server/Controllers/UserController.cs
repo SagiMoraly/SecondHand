@@ -46,6 +46,17 @@ namespace Server.Controllers
             return Ok(result);
         }
 
+        [HttpGet("{email}")]
+        public async Task<ActionResult<bool>> EmailExist([FromRoute] string email)
+        {
+            var result = await _usersRepository.EmailExist(email);
+            if (result)
+            {
+                return BadRequest("Email Is Taken");
+            }
+            return Ok(!result);
+        }
+
         [HttpPut]
         [Authorize]
         public async Task<ActionResult<bool>> EditUser([FromBody]SignupUserModel user)

@@ -87,7 +87,7 @@ namespace Server.Repository
 
         public async Task<UserDTO> GetUser(string userId)
         {
-            var user = await _userManager.FindByIdAsync(userId);
+            var user = await _context.Users.Include(u=> u.RealestateForsale).Include(u => u.RealestateRent).FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
                 return null;
@@ -121,6 +121,16 @@ namespace Server.Repository
 
             string token = _utilityFunctions.GenerateJwtToken(userFromServer.Id);
             return token;
+        }
+
+        public async Task<bool> EmailExist(string email)
+        {
+            var userNameExist = await _userManager.FindByEmailAsync(email);
+            if (userNameExist != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

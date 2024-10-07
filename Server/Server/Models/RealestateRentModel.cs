@@ -5,6 +5,7 @@ namespace Server.Models
     public class RealestateRentModel 
     {
         public Guid Id { get; set; }
+        public DateTime CreatedAt { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
         public int StreetNumber { get; set; }

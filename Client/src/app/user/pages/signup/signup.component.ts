@@ -7,6 +7,8 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
+import { UserAPIService } from '../../../core/services/user-api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +16,12 @@ import {
   styleUrl: './signup.component.scss',
 })
 export class SignupComponent implements OnInit, AfterViewInit {
-  constructor(private fb: FormBuilder, private destroyRef: DestroyRef) {}
+  constructor(
+    private fb: FormBuilder, 
+    private destroyRef: DestroyRef,
+    private userAPI:UserAPIService, 
+    private router: Router
+  ) {}
   formStage1!: FormGroup;
   formStage2!: FormGroup;
   showPasswordReq = false;
@@ -107,5 +114,33 @@ export class SignupComponent implements OnInit, AfterViewInit {
     this.stage = 2
     console.log(this.stage);
     
+  }
+
+  async onSubmitStage1() {
+    this.submited = true;
+
+    console.log(this.formStage1.valid);
+    
+    if(this.formStage1.valid){
+      this.userAPI.isEmailExist(String(this.email?.value)).then(_=>{
+        this.stage = 2
+        this.submited = false
+      }).catch(
+        _ => console.log("fail")
+      )
+    }    
+  }
+
+  
+  async onSubmitStage2() {
+    this.submited = true;
+    if(this.formStage2.valid){
+      this.userAPI.signupUser({...this.formStage2.value , ...this.formStage1.value}).then(
+        a=>{
+          this.router.navigate(["login"])
+          console.log(a)
+        }
+      )
+    }
   }
 }

@@ -9,5 +9,6 @@ namespace Server.IRepository
         public Task<bool> EditUser(SignupUserModel user, string userId);
         public Task<bool> DeleteUser(string userId);
         public Task<string> LoginUser(LoginUserModel user);
+        public Task<bool> EmailExist(string email);
     }
 }
