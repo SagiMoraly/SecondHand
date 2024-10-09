@@ -62,8 +62,7 @@
               "RelativeToolTip": "Server\\Models\\RealestateRentModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T10:46:31.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T10:46:31.037Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "Server\\Models\\RealestateForsaleModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T09:55:35.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T09:55:35.574Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "Server\\IPepository\\IUsersRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwAYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T06:10:38.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T06:10:38.781Z"
             },
             {
               "$type": "Document",
@@ -125,8 +122,7 @@
               "RelativeToolTip": "Server\\Controllers\\UserController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAASwBgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T07:55:35.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T07:55:35.397Z"
             },
             {
               "$type": "Document",
@@ -151,8 +147,7 @@
               "RelativeToolTip": "Server\\Models\\UserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T07:32:35.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T07:32:35.455Z"
             },
             {
               "$type": "Document",
@@ -164,8 +159,7 @@
               "RelativeToolTip": "Server\\Models\\UserModel.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAA1wAkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T07:25:59.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T07:25:59.673Z"
             },
             {
               "$type": "Document",
@@ -177,8 +171,7 @@
               "RelativeToolTip": "Server\\Models\\SignupUserModel.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T06:40:02.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T06:40:02.492Z"
             }
           ]
         }

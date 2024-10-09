@@ -99,14 +99,11 @@
         ></path>
       </svg>
     </div>
-    <!-- showRooms -->
     <div [hidden]="!showRooms" class="type-property dialog">
-      <!-- <div>placement</div>
-      <div>placement</div> -->
       <app-room-selection (click)="clickInDialog($event)"></app-room-selection>
     </div>
   </div>
-  <div class="dialog-button">
+  <div class="dialog-button" (click)="showMoreFilters = !showMoreFilters">
     <svg
       width="1em"
       height="1em"
@@ -128,8 +125,11 @@
       ></path>
     </svg>
     <span>סינונים נוספים</span>
+    <div [hidden]="!showMoreFilters" class="dialog more-filters-container">
+      <app-more-filters (click)="clickInDialog($event)" ></app-more-filters>
+    </div>
   </div>
-  <div>
+  <div class="search">
     <span>חיפוש</span>
   </div>
 </div>

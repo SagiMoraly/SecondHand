@@ -11,6 +11,7 @@ export class SearchRealestateComponent {
   showProperty = false;
   showPrice = false;
   showRooms = false;
+  showMoreFilters = false
 
   setCarName($event: any) {
     this.car = $event.name;

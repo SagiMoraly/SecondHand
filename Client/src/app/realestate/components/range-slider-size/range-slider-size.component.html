@@ -30,13 +30,8 @@
         [value]="inputMin"
         (keypress)="validateNumberInput($event)"
       />
-      <!-- <select name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select> -->
     </div>
+    <!-- [(ngModel)]="minValue" -->
     <svg
       width="1em"
       height="1em"
@@ -52,7 +47,7 @@
     <div class="price-min">
       <input
         type="input"
-        placeholder="₪ +20,000"
+        placeholder="+500"
         (input)="setMax($event)"
         [value]="inputMax"
         (keypress)="validateNumberInput($event)"

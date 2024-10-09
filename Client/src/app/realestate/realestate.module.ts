@@ -11,6 +11,10 @@ import { RangeSliderComponent } from './components/range-slider/range-slider.com
 import { SharedModule } from '../shared/shared.module';
 import { MultiSelectComponent } from './components/multi-select/multi-select.component';
 import { RoomSelectionComponent } from './components/room-selection/room-selection.component';
+import { MoreFiltersComponent } from './components/more-filters/more-filters.component';
+import { SanitizeHtmlPipePipe } from './pips/sanitize-html-pipe.pipe';
+import { RangeSliderFloorComponent } from './components/range-slider-floor/range-slider-floor.component';
+import { RangeSliderSizeComponent } from './components/range-slider-size/range-slider-size.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { RoomSelectionComponent } from './components/room-selection/room-selecti
     RangeSliderComponent,
     MultiSelectComponent,
     RoomSelectionComponent,
+    MoreFiltersComponent,
+    SanitizeHtmlPipePipe,
+    RangeSliderFloorComponent,
+    RangeSliderSizeComponent
   ],
   imports: [CommonModule, SharedModule],
 })
