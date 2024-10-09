@@ -68,9 +68,3 @@ export class AutocompleteComponent implements OnInit {
     this.filtersearchOptions(this.searchInput.nativeElement.value);
   }
 }
-
-/**
- * make search filter
- * make the search by 4 sections
- * click make it in the search
- */
