@@ -5,7 +5,9 @@
   </div>
   <div class="divider"></div>
   <!--  -->
-  <div class="dialog-button" (click)="showSaleRent = !showSaleRent">
+  <div class="dialog-button" 
+  (click)="showSaleRent = !showSaleRent"
+  >
     <span>השכרה</span>
     <div class="drop-down-icon" [ngClass]="showSaleRent ? 'open-rotate' : ''">
       <svg
@@ -22,13 +24,21 @@
         ></path>
       </svg>
     </div>
-    <div *ngIf="showSaleRent" class="sale-rent dialog">
-      <div>מחירה</div>
-      <div>השכרה</div>
+    <div 
+    [hidden]="!showSaleRent" 
+    class="sale-rent dialog"
+    (click)="clickInDialog($event)"
+    [appOutSideClick]="showSaleRent"
+    (outSideClick)="showSaleRent = false"
+    >
+      <div routerLinkActive="active-link" routerLink="/realestate/forsale">מחירה</div>
+      <div routerLinkActive="active-link" routerLink="/realestate/rent">השכרה</div>
     </div>
   </div>
   <!--  -->
-  <div class="dialog-button" (click)="showProperty = !showProperty">
+  <div class="dialog-button" 
+  (click)="showProperty = !showProperty" 
+  >
     <span>סוג הנכס</span>
     <div class="drop-down-icon" [ngClass]="showProperty ? 'open-rotate' : ''">
       <svg
@@ -46,9 +56,11 @@
       </svg>
     </div>
     <div
-      *ngIf="showProperty"
+      [hidden]="!showProperty"
       class="type-property dialog"
       (click)="clickInDialog($event)"
+      [appOutSideClick]="showProperty"
+      (outSideClick)="showProperty = false"
     >
       <div><app-multi-select></app-multi-select></div>
     </div>
@@ -73,15 +85,18 @@
     </div>
     <!-- showPrice -->
     <div
-      *ngIf="showPrice"
+      [hidden]="!showPrice"
       class="type-property dialog"
       (click)="clickInDialog($event)"
+      [appOutSideClick]="showPrice"
+      (outSideClick)="showPrice = false"
     >
       <div>
         <app-range-slider></app-range-slider>
       </div>
     </div>
   </div>
+  <!--  -->
   <div class="dialog-button" (click)="showRooms = !showRooms">
     <span>חדרים</span>
     <div class="drop-down-icon" [ngClass]="showRooms ? 'open-rotate' : ''">
@@ -99,10 +114,15 @@
         ></path>
       </svg>
     </div>
-    <div [hidden]="!showRooms" class="type-property dialog">
-      <app-room-selection (click)="clickInDialog($event)"></app-room-selection>
+    <div [hidden]="!showRooms" class="type-property dialog"
+    (click)="clickInDialog($event)"
+    [appOutSideClick]="showRooms"
+    (outSideClick)="showRooms = false"
+    >
+      <app-room-selection ></app-room-selection>
     </div>
   </div>
+  <!--  -->
   <div class="dialog-button" (click)="showMoreFilters = !showMoreFilters">
     <svg
       width="1em"
@@ -125,8 +145,10 @@
       ></path>
     </svg>
     <span>סינונים נוספים</span>
-    <div [hidden]="!showMoreFilters" class="dialog more-filters-container">
-      <app-more-filters (click)="clickInDialog($event)" ></app-more-filters>
+    <div [hidden]="!showMoreFilters" class="dialog more-filters-container"
+    (click)="clickInDialog($event)"
+    >
+      <app-more-filters></app-more-filters>
     </div>
   </div>
   <div class="search">

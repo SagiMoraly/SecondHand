@@ -1,2 +1,43 @@
-<app-search-realestate></app-search-realestate>
-<p>forsale works!</p>
+<div class="main-container">
+    <div class="filters">
+        <app-search-realestate></app-search-realestate>
+    </div>
+    <div class="main-content">
+        <div class="realestate-container">
+            <h1 class="content-title">נדל"ן למכירה</h1>
+            <div>
+                <div class="result-cotainer">
+                    <div class="result-amount">3,320 תוצאות</div>
+                    <div class="order-by-container" (click)="showOrderBy = !showOrderBy">
+                        <div class="order-by-title">מיון לפי</div>
+                        <div>תאריך</div>
+                        <div class="drop-down-icon" [ngClass]="showOrderBy ? 'open-rotate' : ''">
+                            <svg
+                              width="1em"
+                              height="1em"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="pseudo-drop-button_buttonIcon__ePgkI"
+                            >
+                              <path
+                                d="M17.695 8.675a.75.75 0 011.13.98l-.073.085-6.18 6.136a.75.75 0 01-.976.07l-.084-.074L5.41 9.727a.75.75 0 01.98-1.13l.084.074 5.574 5.612 5.647-5.608z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                        </div>
+                        <div [hidden]="!showOrderBy">
+                            <!-- <div *ngFor=""></div> -->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    realestate card
+                </div>
+            </div>
+        </div>
+        <div class="map-container">
+
+        </div>
+    </div>
+</div>

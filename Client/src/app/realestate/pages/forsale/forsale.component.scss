@@ -1,0 +1,61 @@
+.main-container{
+    position: relative;
+    top: -4px;
+    height: 100%;
+    color: rgb(54,54,54);
+    .filters{
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+    }
+    .main-content{
+        height: 100%;
+        display: flex;
+        position: relative;
+        .realestate-container{
+            width: 70%;
+            .content-title{
+                margin: 0;
+                font-size: 24px;
+                font-weight: 500;
+                padding: 0 15px;
+                padding-top: 95px;
+            }
+            .result-cotainer{
+                font-size: 1rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding:  15px;
+                .result-amount{
+                    color: rgb(153,153,153);
+                }
+                .order-by-container{
+                    display: flex;
+                    position: relative;
+                    .order-by-title{
+                        color: rgb(153,153,153);   
+                        margin-left: 6px; 
+                    }
+                    .drop-down-icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 6px;
+                      }
+                      .open-rotate {
+                        transform: rotate(180deg);
+                      }
+                }
+            }
+        }
+        .map-container{
+            left: 0;
+            top: 0;
+            position: absolute;
+            height: 100%;
+            width: 30%;
+            background-color: rgba(45, 104, 104, 0.677);
+        }
+    }
+}

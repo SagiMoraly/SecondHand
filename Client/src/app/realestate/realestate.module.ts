@@ -15,6 +15,7 @@ import { MoreFiltersComponent } from './components/more-filters/more-filters.com
 import { SanitizeHtmlPipePipe } from './pips/sanitize-html-pipe.pipe';
 import { RangeSliderFloorComponent } from './components/range-slider-floor/range-slider-floor.component';
 import { RangeSliderSizeComponent } from './components/range-slider-size/range-slider-size.component';
+import { OutSideClickDirective } from './directives/out-side-click.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RangeSliderSizeComponent } from './components/range-slider-size/range-s
     MoreFiltersComponent,
     SanitizeHtmlPipePipe,
     RangeSliderFloorComponent,
-    RangeSliderSizeComponent
+    RangeSliderSizeComponent,
+    OutSideClickDirective
   ],
   imports: [CommonModule, SharedModule],
 })

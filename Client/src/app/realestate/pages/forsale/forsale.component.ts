@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrl: './forsale.component.scss'
 })
 export class ForsaleComponent {
+  showOrderBy = false
 
+  orderBy = [
+    {
+      name: "תאריך",
+      selected: true
+    },
+    {
+      name: "מחיר - מהזול ליקל",
+      selected: false
+    },
+    {
+      name: "מחיר - מהיקר לזול",
+      seleted: false
+    },
+    {
+      name: "קרוב אליי",
+      seleted: false
+    }
+  ]
 }
