@@ -76,6 +76,162 @@ export class ForsaleComponent {
       features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
       squareMeter: 213,
       price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
+    },
+    {
+      id: "fbksjdlcuisk778",
+      createdAt: new Date().getDate(),
+      city: "רמת גן",
+      street: "בננה סטריט",
+      streetNumber: 25,
+      floor: 1,
+      floorsTotal: 3,
+      rooms: 2.5, // Can be 1.5, 2.5, etc.
+      features: ['ממ"ד', 'חניה', 'מחסן'], // for features list
+      squareMeter: 213,
+      price: 2300000, // Sale price >= 10K
     }
   ]
 

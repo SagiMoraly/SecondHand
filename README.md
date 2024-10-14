@@ -9,7 +9,7 @@
 - add super search for the realestate *
 - realestate card *
 - paginator *
-- footer
+- footer *
 - realestate page
 - post realesete
 
