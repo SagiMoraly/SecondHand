@@ -10,6 +10,7 @@ import { PublishComponent } from './realestate/pages/publish/publish.component';
 import { ForsaleComponent } from './realestate/pages/forsale/forsale.component';
 import { RentComponent } from './realestate/pages/rent/rent.component';
 import { NotFoundComponent } from './core/pages/not-found/not-found.component';
+import { RealestateDetailComponent } from './realestate/pages/realestate-detail/realestate-detail.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,9 @@ const routes: Routes = [
           },
           {
             path:"rent", component:RentComponent
+          },
+          {
+            path:":id", component:RealestateDetailComponent
           },
           {
             path:"", redirectTo: "forsale", pathMatch: "full"

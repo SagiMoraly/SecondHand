@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div *ngFor="let realestate of realestateSearchList">
-                    <app-realestate-card [realestate]="realestate"></app-realestate-card>
+                    <app-realestate-card [routerLink]="['/realestate' , realestate.id]" [realestate]="realestate"></app-realestate-card>
                 </div>
                 <div class="paginator">
                     <app-paginator [length]="100" [pageSize]="10" (changePageEmitter)="changePage($event)" ></app-paginator>
