@@ -7,7 +7,9 @@
 - login vision on navbar *
 - logic for signup *
 - add super search for the realestate *
-- realestate card
+- realestate card *
+- paginator *
+- footer
 - realestate page
 - post realesete
 

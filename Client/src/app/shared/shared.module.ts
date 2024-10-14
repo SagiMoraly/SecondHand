@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [],
@@ -12,7 +14,14 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     FormsModule,
     ReactiveFormsModule,
     NgxSliderModule,
+    MatDialogModule
   ],
-  exports: [RouterModule, FormsModule, ReactiveFormsModule, NgxSliderModule],
+  exports: [
+    RouterModule, 
+    FormsModule, 
+    ReactiveFormsModule, 
+    NgxSliderModule,
+    MatDialogModule
+  ],
 })
 export class SharedModule {}

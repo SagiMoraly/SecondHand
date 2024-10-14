@@ -53,6 +53,7 @@ ngAfterViewInit(): void {
   this.cd.detectChanges()
 }
 
+
 selectMeProperty(index : number){
   this.propertyList[index].selected = !this.propertyList[index].selected
 }

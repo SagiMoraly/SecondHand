@@ -33,6 +33,7 @@
                 .order-by-container{
                     display: flex;
                     position: relative;
+                    cursor: pointer;
                     .order-by-title{
                         color: rgb(153,153,153);   
                         margin-left: 6px; 
@@ -46,6 +47,34 @@
                       .open-rotate {
                         transform: rotate(180deg);
                       }
+                      .order-by-list{
+                        position: absolute;
+                        width: 200px;
+                        top: 100%;
+                        left: 0;
+                        background-color: white;
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+                        border-radius: 12px;
+                        border: 1px solid rgb(238,238,238);
+                        .order-by-list-item{
+                            font-size: 1rem;
+                            padding: 12px 12px 12px 60px;
+                            position: relative;
+                            &:hover{
+                                background-color: rgb(248, 248, 248);
+                            }
+                            &.selected-by{
+                                font-weight: 500;
+                                background-color: rgb(248, 248, 248);
+                                &::after{
+                                    content: "✓";
+                                    color: rgb(255, 113, 0);
+                                    position: absolute;
+                                    left: 20px;
+                                }
+                            }
+                        }
+                      }
                 }
             }
         }
@@ -56,6 +85,13 @@
             height: 100%;
             width: 30%;
             background-color: rgba(45, 104, 104, 0.677);
+        }
+        .content-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .paginator{
+            align-self: center;
         }
     }
 }

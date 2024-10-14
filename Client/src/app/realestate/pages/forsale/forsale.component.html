@@ -5,12 +5,12 @@
     <div class="main-content">
         <div class="realestate-container">
             <h1 class="content-title">נדל"ן למכירה</h1>
-            <div>
+            <div class="content-container">
                 <div class="result-cotainer">
                     <div class="result-amount">3,320 תוצאות</div>
                     <div class="order-by-container" (click)="showOrderBy = !showOrderBy">
                         <div class="order-by-title">מיון לפי</div>
-                        <div>תאריך</div>
+                        <div>{{selectedOption}}</div>
                         <div class="drop-down-icon" [ngClass]="showOrderBy ? 'open-rotate' : ''">
                             <svg
                               width="1em"
@@ -26,13 +26,26 @@
                               ></path>
                             </svg>
                         </div>
-                        <div [hidden]="!showOrderBy">
-                            <!-- <div *ngFor=""></div> -->
+                        <div 
+                        [hidden]="!showOrderBy" 
+                        class="order-by-list"
+                        [appOutSideClick]="showOrderBy"
+                        (outSideClick)="showOrderBy = false"
+                        >
+                            <div 
+                            *ngFor="let by of orderByList" 
+                            (click)="selectedOption = by" 
+                            class="order-by-list-item"
+                            [ngClass]="by === selectedOption ? 'selected-by' : '' "
+                            >{{by}}</div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    realestate card
+                <div *ngFor="let realestate of realestateSearchList">
+                    <app-realestate-card [realestate]="realestate"></app-realestate-card>
+                </div>
+                <div class="paginator">
+                    <app-paginator [length]="100" [pageSize]="10" (changePageEmitter)="changePage($event)" ></app-paginator>
                 </div>
             </div>
         </div>

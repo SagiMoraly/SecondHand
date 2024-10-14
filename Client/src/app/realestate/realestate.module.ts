@@ -16,6 +16,7 @@ import { SanitizeHtmlPipePipe } from './pips/sanitize-html-pipe.pipe';
 import { RangeSliderFloorComponent } from './components/range-slider-floor/range-slider-floor.component';
 import { RangeSliderSizeComponent } from './components/range-slider-size/range-slider-size.component';
 import { OutSideClickDirective } from './directives/out-side-click.directive';
+import { PaginatorComponent } from './components/paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { OutSideClickDirective } from './directives/out-side-click.directive';
     SanitizeHtmlPipePipe,
     RangeSliderFloorComponent,
     RangeSliderSizeComponent,
-    OutSideClickDirective
+    OutSideClickDirective,
+    PaginatorComponent
   ],
   imports: [CommonModule, SharedModule],
 })

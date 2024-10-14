@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    color: rgb(153,153,153);
+    width: 100%;
+    font-size: 1rem;
+    align-items: center;
+    .go-right, .go-left{
+        font-size: 24px;
+        color: rgb(54,54,54);
+    }
+    .pages-container{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .page{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px;
+            min-height: 36px;
+            padding: 7px 10px;
+            line-height: 0;
+            border-radius: 27px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(248,248,248);
+                color: rgb(54,54,54);
+            }
+            &.selected{
+                font-weight: 500;
+                pointer-events: none;
+                color: rgb(255,113,0);
+                background: rgb(255,241,229);
+            }
+        }
+    }
+}

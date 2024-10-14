@@ -123,7 +123,7 @@
     </div>
   </div>
   <!--  -->
-  <div class="dialog-button" (click)="showMoreFilters = !showMoreFilters">
+  <div class="dialog-button" (click)="openDialog($event)">
     <svg
       width="1em"
       height="1em"
@@ -145,13 +145,15 @@
       ></path>
     </svg>
     <span>סינונים נוספים</span>
-    <div [hidden]="!showMoreFilters" class="dialog more-filters-container"
-    (click)="clickInDialog($event)"
-    >
-      <app-more-filters></app-more-filters>
-    </div>
   </div>
   <div class="search">
     <span>חיפוש</span>
+    <div [hidden]="!showMoreFilters" class="dialog more-filters-container"
+    
+    >
+    <!-- <mat-dialog-content>
+      <app-more-filters></app-more-filters>
+    </mat-dialog-content> -->
+    </div>
   </div>
 </div>

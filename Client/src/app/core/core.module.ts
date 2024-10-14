@@ -9,6 +9,7 @@ import { CoreComponent } from './pages/core/core.component';
 import { AdCardComponent } from './components/ad-card/ad-card.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthorizedInterceptor } from './interceptors/authorized.interceptor';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AuthorizedInterceptor } from './interceptors/authorized.interceptor';
     HomeComponent,
     CoreComponent,
     AdCardComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
