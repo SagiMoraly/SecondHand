@@ -1,0 +1,68 @@
+.custom-slider .price-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+.custom-slider .price-range input {
+  width: 100%;
+  border: 1px solid rgb(204, 204, 204);
+  outline: none;
+  font-size: 1rem;
+  min-height: 42px;
+  border-radius: 4px;
+}
+.custom-slider .price-range input:focus {
+  border: 1px solid #363636;
+}
+
+::ng-deep .custom-slider {
+  width: 380px;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-bar {
+  background: rgb(204, 204, 204);
+  height: 3px;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-selection {
+  background: rgb(34, 34, 34);
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-pointer {
+  transform: translateX(50%);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  opacity: unset;
+  border: 1px solid rgb(204, 204, 204);
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-pointer-min::before {
+  content: "| |";
+  font-size: 0.625rem;
+  color: rgb(54, 54, 54);
+  align-self: center;
+  line-height: 2px;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-pointer-max::before {
+  content: "| |";
+  font-size: 0.625rem;
+  color: rgb(54, 54, 54);
+  align-self: center;
+  line-height: 2px;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-pointer:after {
+  display: none;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-bubble {
+  display: none;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-bubble.ngx-slider-limit {
+  display: none;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-tick {
+  display: none;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+  display: none;
+}/*# sourceMappingURL=range-slider.component.css.map */

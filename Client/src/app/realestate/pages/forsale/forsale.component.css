@@ -1,0 +1,98 @@
+@charset "UTF-8";
+.main-container {
+  position: relative;
+  top: -4px;
+  height: 100%;
+  color: rgb(54, 54, 54);
+}
+.main-container .filters {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+.main-container .main-content {
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.main-container .main-content .realestate-container {
+  width: 70%;
+}
+.main-container .main-content .realestate-container .content-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 0 15px;
+  padding-top: 95px;
+}
+.main-container .main-content .realestate-container .result-cotainer {
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.main-container .main-content .realestate-container .result-cotainer .result-amount {
+  color: rgb(153, 153, 153);
+}
+.main-container .main-content .realestate-container .result-cotainer .order-by-container {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+.main-container .main-content .realestate-container .result-cotainer .order-by-container .order-by-title {
+  color: rgb(153, 153, 153);
+  margin-left: 6px;
+}
+.main-container .main-content .realestate-container .result-cotainer .order-by-container .drop-down-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+}
+.main-container .main-content .realestate-container .result-cotainer .order-by-container .open-rotate {
+  transform: rotate(180deg);
+}
+.main-container .main-content .realestate-container .result-cotainer .order-by-container .order-by-list {
+  position: absolute;
+  width: 200px;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  border: 1px solid rgb(238, 238, 238);
+}
+.main-container .main-content .realestate-container .result-cotainer .order-by-container .order-by-list .order-by-list-item {
+  font-size: 1rem;
+  padding: 12px 12px 12px 60px;
+  position: relative;
+}
+.main-container .main-content .realestate-container .result-cotainer .order-by-container .order-by-list .order-by-list-item:hover {
+  background-color: rgb(248, 248, 248);
+}
+.main-container .main-content .realestate-container .result-cotainer .order-by-container .order-by-list .order-by-list-item.selected-by {
+  font-weight: 500;
+  background-color: rgb(248, 248, 248);
+}
+.main-container .main-content .realestate-container .result-cotainer .order-by-container .order-by-list .order-by-list-item.selected-by::after {
+  content: "✓";
+  color: rgb(255, 113, 0);
+  position: absolute;
+  left: 20px;
+}
+.main-container .main-content .map-container {
+  left: 0;
+  top: 25%;
+  position: sticky;
+  height: 70vh;
+  width: 30%;
+  background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 29%, rgb(0, 212, 255) 72%);
+}
+.main-container .main-content .content-container {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .main-content .paginator {
+  align-self: center;
+}/*# sourceMappingURL=forsale.component.css.map */

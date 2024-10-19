@@ -1,0 +1,196 @@
+.common-structure {
+  background-color: rgb(255, 248, 239);
+}
+
+.login-grid {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.login-grid .login-header {
+  align-self: normal;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin-right: 42px;
+}
+.login-grid .login-header img {
+  padding-top: 30px;
+}
+.login-grid .main-content {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+}
+.login-grid .main-content .container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 30px;
+  width: 100%;
+}
+.login-grid .main-content .container .login-box {
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  height: 600px;
+  width: 50%;
+  padding: 35px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 35px 35px 15px;
+}
+.login-grid .main-content .container .login-box .off-enter {
+  top: -50px;
+  position: absolute;
+  right: 37%;
+  color: #363636;
+  text-decoration: none;
+}
+.login-grid .main-content .container .login-box .submit-custom-button {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  background-color: rgb(255, 113, 0);
+  border: 1px solid rgb(255, 113, 0);
+  color: white;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-top: 30px;
+  font-size: 1rem;
+}
+.login-grid .main-content .container .login-box .submit-custom-button:hover {
+  background-color: rgb(216, 96, 0);
+}
+.login-grid .login-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+.login-grid .login-info .login-features {
+  display: flex;
+}
+
+.login-box-main {
+  height: 100%;
+  width: 100%;
+}
+
+.common-form {
+  height: 100%;
+}
+.common-form .form-title {
+  text-align: center;
+  font-size: 24px;
+  color: #363636;
+}
+.common-form .form-inputs {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.common-form .form-inputs label {
+  width: 100%;
+}
+.common-form .form-inputs label .input-title {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+.common-form .form-inputs label input {
+  font-size: 1rem;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  padding: 10px 15px 10px 35px;
+  height: 50px;
+  width: 100%;
+  outline: none;
+}
+.common-form .form-inputs label input:hover, .common-form .form-inputs label input:focus {
+  border: 1px solid rgb(131, 131, 131);
+}
+.common-form .form-inputs .forgot-password {
+  color: rgb(255, 113, 0);
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.common-form .text-separation {
+  align-items: center;
+  color: rgb(204, 204, 204);
+  display: flex;
+  gap: 20px;
+  margin-block: 20px 10px;
+}
+.common-form .text-separation::before, .common-form .text-separation::after {
+  background-color: rgb(204, 204, 204);
+  content: "";
+  flex: 1;
+  height: 1px;
+}
+.common-form .buttons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.common-form .buttons-container .social-button {
+  width: 100%;
+  background-color: white;
+  border-color: rgb(204, 204, 204);
+  color: rgb(54, 54, 54);
+  border-radius: 30px;
+  height: 50px;
+}
+.common-form .buttons-container .social-button:hover {
+  color: rgb(255, 113, 0);
+  border-color: rgb(255, 113, 0);
+}
+.common-form .no-acount {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.common-form .no-acount a {
+  color: rgb(255, 113, 0);
+  font-weight: 500;
+  text-decoration: none;
+}
+.common-form .error {
+  color: rgb(255, 42, 43);
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.common-form .error-border {
+  border-color: rgb(255, 42, 43) !important;
+}
+
+.title-large {
+  padding-right: 40px;
+  font-size: 36px;
+  font-weight: 400;
+  color: #363636;
+}
+
+.login-features {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.login-features .login-features-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-features .login-features-item .login-features-image {
+  height: 60px;
+}/*# sourceMappingURL=login.component.css.map */

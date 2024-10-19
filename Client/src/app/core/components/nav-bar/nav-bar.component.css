@@ -1,0 +1,199 @@
+.navbar-container {
+  direction: rtl;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 64px;
+  padding: 0 20px;
+  box-shadow: 2px 2px 1px rgba(208, 208, 208, 0.312);
+  width: 100vw;
+  z-index: 100;
+  background-color: white;
+  opacity: 0.96;
+}
+.navbar-container .logo-icon {
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+}
+.navbar-container .logo-icon img {
+  width: 74px;
+}
+.navbar-container .nav {
+  height: 100%;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar-container .nav .nav-item {
+  position: relative;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.navbar-container .nav .nav-item ul {
+  z-index: 1000;
+  min-width: 225px;
+  display: none;
+  grid-template-rows: repeat(5, 25px);
+  gap: 11px;
+  padding: 25px;
+  grid-auto-flow: column;
+  line-height: 25px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar-container .nav .nav-item ul li {
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-width: 150px;
+}
+.navbar-container .nav .nav-item ul li svg {
+  font-size: 1.5rem;
+}
+.navbar-container .nav .nav-item:hover {
+  background-color: rgb(238, 238, 238);
+}
+.navbar-container .nav .nav-item:hover ul {
+  display: grid;
+}
+.navbar-container .nav .nav-item:hover ul li:hover span, .navbar-container .nav .nav-item:hover ul li:hover svg {
+  color: rgb(255, 119, 10);
+}
+.navbar-container span {
+  color: #363636;
+  cursor: pointer;
+}
+
+.login-side ul {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.login-side ul li {
+  max-height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-side ul .favorite-container {
+  padding: 0 6px;
+  position: relative;
+}
+.login-side ul .favorite-container .favorite-popup {
+  opacity: 0.96;
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 6px 10px 0 rgba(0, 0, 0, 0.14);
+  font-size: 0.875rem;
+}
+.login-side ul .favorite-container .favorite-popup .favorite-popup-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.login-side ul .favorite-container:hover {
+  background-color: rgb(248, 248, 248);
+}
+.login-side ul .favorite-container:hover .favorite-popup {
+  display: block;
+}
+.login-side ul .login-container {
+  padding: 0 20px;
+}
+.login-side ul .login-container .login-popup {
+  opacity: 0.96;
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 6px 10px 0 rgba(0, 0, 0, 0.14);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: rgb(54, 54, 54);
+}
+.login-side ul .login-container .login-popup li {
+  padding: 0px 20px 0px 30px;
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  line-height: 50px;
+  width: 100%;
+}
+.login-side ul .login-container .login-popup li:hover {
+  background-color: rgb(248, 248, 248);
+}
+.login-side ul .login-container .login-popup li svg {
+  font-size: 1.5rem;
+}
+.login-side ul .login-container:hover {
+  background-color: rgb(248, 248, 248);
+}
+.login-side ul .login-container:hover .login-popup {
+  display: block;
+}
+.login-side ul .login-container .login-img svg {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-weight: 400;
+  border-radius: 50%;
+  text-align: center;
+  background: rgb(238, 238, 238);
+  border: 1px solid rgb(204, 204, 204);
+  font-size: 25px;
+  padding: 6px;
+  margin-left: 6px;
+}
+.login-side ul .post-item-container .post-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid rgb(255, 113, 0);
+  border-radius: 30px;
+  margin: auto 0;
+  height: 36px;
+  padding: 0 16px 0 18px;
+}
+.login-side ul .post-item-container .post-item span, .login-side ul .post-item-container .post-item svg {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(255, 113, 0);
+}
+.login-side ul .post-item-container .post-item:hover {
+  background-color: rgb(255, 250, 245);
+}
+
+.login-container .logedin-img {
+  background: rgb(255, 241, 229);
+  border: 1px solid rgb(255, 113, 0);
+  color: rgb(255, 113, 0);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-weight: 400;
+  border-radius: 50%;
+  text-align: center;
+}/*# sourceMappingURL=nav-bar.component.css.map */

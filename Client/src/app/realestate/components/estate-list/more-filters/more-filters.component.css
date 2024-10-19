@@ -1,0 +1,189 @@
+@charset "UTF-8";
+.container {
+  position: relative;
+  direction: rtl;
+}
+.container .modal-container {
+  color: black;
+  background-color: white;
+  max-width: 520px;
+  border-radius: 12px;
+}
+.container .modal-container .header {
+  width: 520px;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  padding: 14px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.container .modal-container .header .exit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 13px;
+  font-size: 46px;
+  cursor: pointer;
+}
+.container .modal-container .header div {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.container .modal-container .main {
+  overflow-y: scroll;
+  max-height: 80vh;
+  color: rgb(54, 54, 54);
+  font-size: 0.875rem;
+}
+.container .modal-container .main > div {
+  margin: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+.container .modal-container .main > div input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  vertical-align: top;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.container .modal-container .main > div input[type=checkbox]:checked {
+  background-color: rgb(255, 113, 0);
+  border-color: rgb(255, 113, 0);
+  position: relative;
+}
+.container .modal-container .main > div input[type=checkbox]:checked::after {
+  position: absolute;
+  content: "✔";
+  color: white;
+  line-height: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .modal-container .main > div .title-main {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(54, 54, 54);
+}
+.container .modal-container .main > div .property-checkbox-container {
+  display: grid;
+  gap: 12px 80px;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+}
+.container .modal-container .main > div .who-showed-container {
+  display: flex;
+  gap: 110px;
+}
+.container .modal-container .main > div .property-multi-container {
+  padding: 14px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.container .modal-container .main > div .property-multi-container .selection-button {
+  padding: 0.51em 1em;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 0.28em;
+  background-color: rgb(255, 255, 255);
+  color: rgb(54, 54, 54);
+  font-size: 0.875rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  cursor: pointer;
+}
+.container .modal-container .main > div .property-multi-container .selection-button svg {
+  font-size: 1.5rem;
+  margin-left: 4px;
+}
+.container .modal-container .main > div .property-multi-container .selection-button:hover {
+  color: rgb(255, 113, 0);
+  border-color: rgb(255, 113, 0);
+}
+.container .modal-container .main > div .property-multi-container .selected-button {
+  color: rgb(255, 113, 0);
+  border-color: rgb(255, 113, 0);
+  background-color: #fffaf5;
+}
+.container .modal-container .main > div .property-multi-container .property-icon {
+  display: inline-block;
+  margin-right: 8px;
+  width: 1em;
+  height: 1em;
+}
+.container .modal-container .main > div .property-state {
+  display: grid;
+  flex-direction: column;
+  gap: 25px;
+}
+.container .modal-container .main > div .date-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+.container .modal-container .main > div .date-container .data-input-container {
+  border-color: rgb(204, 204, 20);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid;
+  transition: border-color 0.2s;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 0 11px;
+}
+.container .modal-container .main > div .date-container .data-input-container input {
+  font-size: 1rem;
+  min-height: 42px;
+  color: rgb(54, 54, 54);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: unset;
+  flex-grow: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  line-height: 1.15;
+  margin: 0;
+}
+.container .modal-container .main > div .search-container input {
+  width: 100%;
+  min-height: 42px;
+  color: rgb(54, 54, 54);
+  font-size: 1rem;
+  border: 1px solid 204, 204, 204;
+}
+.container .modal-container .footer {
+  justify-content: space-between;
+  display: flex;
+  padding: 14px 30px;
+  border-top: 1px solid rgb(220, 220, 220);
+  align-items: center;
+}
+.container .modal-container .footer .reset-button {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.container .modal-container .footer .accept-button {
+  font-weight: 500;
+  color: rgb(255, 113, 0);
+  border-radius: 47px;
+  padding: 10px 20px;
+  border: 1px solid rgb(255, 113, 0);
+  margin-right: auto;
+  cursor: pointer;
+}
+.container .modal-container .footer .accept-button:hover {
+  background-color: rgb(255, 241, 229);
+}/*# sourceMappingURL=more-filters.component.css.map */

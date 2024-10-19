@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .sub-container {
+  max-width: 1200px;
+}
+.container .sub-container .img-container {
+  margin-top: 30px;
+  position: relative;
+}
+.container .sub-container .img-container .active-button-container {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  top: 20px;
+  right: 20px;
+}
+.container .sub-container .img-container .active-button-container .active-button {
+  padding: 8px 12px 8px 18px;
+  background-color: white;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 30px;
+  display: flex;
+}
+.container .sub-container .img-container .active-button-container .active-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: middle;
+}
+.container .sub-container .main-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 100%;
+  padding-top: 30px;
+}
+.container .sub-container .main-container .content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+.container .sub-container .main-container .content-container .title {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.container .sub-container .main-container .content-container .sub-title {
+  font-size: 1.125rem;
+  margin-top: 10px;
+}
+.container .sub-container .main-container .content-container .common-detail {
+  display: flex;
+  margin: 34px 0;
+  padding: 18px 0;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 12px;
+  width: 400px;
+  justify-content: space-around;
+}
+.container .sub-container .main-container .content-container .common-detail div {
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.container .sub-container .main-container .content-container .common-detail div svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.container .sub-container .main-container .content-container .divider {
+  margin: 40px 0;
+  align-self: center;
+  width: 90%;
+  height: 1px;
+  background-color: rgb(238, 238, 238);
+}
+.container .sub-container .main-container .content-container .extra-detail-container .extra-detail-title {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.container .sub-container .main-container .content-container .extra-detail-container .extra-detail {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .sub-container .main-container .content-container .extra-detail-container .extra-detail div {
+  margin-bottom: 10px;
+  width: 360px;
+  display: grid;
+  grid-template-columns: 40% 50%;
+}
+.container .sub-container .main-container .content-container .extra-detail-container .extra-detail div .detail-name {
+  color: #999999;
+}
+.container .sub-container .main-container .content-container .feature-title {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.container .sub-container .main-container .content-container .feature-container {
+  font-size: 16px;
+  display: grid;
+  row-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.container .sub-container .main-container .content-container .feature-container .feature {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.container .sub-container .main-container .content-container .feature-container .feature img {
+  height: 24px;
+  width: 24px;
+}
+.container .sub-container .main-container .content-container .feature-container .feature.deselect {
+  opacity: 0.3;
+}
+.container .sub-container .main-container .contact-container {
+  position: sticky;
+  top: 90px;
+  height: 230px;
+  background-color: white;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgb(var(--isabelline));
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+}
+.container .sub-container .main-container .contact-container .contact-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.container .sub-container .main-container .contact-container .divider {
+  margin: 40px 0;
+  align-self: center;
+  width: 90%;
+  height: 1px;
+  background-color: rgb(238, 238, 238);
+}
+.container .sub-container .main-container .contact-container .contact-button {
+  display: flex;
+  background-color: rgb(16, 173, 111);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+}
+.container .sub-container .main-container .contact-container .contact-button svg {
+  margin-left: 5px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.container .sub-container .main-container .contact-container .contact-button div {
+  font-size: 1.125rem;
+}
+
+.edit-me {
+  color: #999999;
+  opacity: 0.3;
+}/*# sourceMappingURL=realestate-detail.component.css.map */

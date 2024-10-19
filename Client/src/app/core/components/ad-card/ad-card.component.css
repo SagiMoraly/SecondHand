@@ -1,0 +1,23 @@
+.container {
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 8px;
+  margin: 0 6px;
+  background-color: white;
+  transition: all 0.6s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  width: 288px;
+  cursor: pointer;
+}
+.container .img {
+  height: 150px;
+  width: 288px;
+}
+.container .text-box {
+  padding: 20px 10px;
+}
+.container .text-box .title {
+  font-size: 1.1rem;
+}
+.container:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}/*# sourceMappingURL=ad-card.component.css.map */

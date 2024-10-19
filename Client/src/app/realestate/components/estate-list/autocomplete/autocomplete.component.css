@@ -1,0 +1,25 @@
+.search-conteiner {
+  position: relative;
+}
+.search-conteiner .autocomplete-container {
+  z-index: 50;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  margin-top: 10px;
+  background-color: white;
+  width: 320px;
+  padding-bottom: 5px;
+}
+.search-conteiner .search-result {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.search-conteiner .search-result:hover {
+  background-color: rgb(248, 248, 248);
+}/*# sourceMappingURL=autocomplete.component.css.map */

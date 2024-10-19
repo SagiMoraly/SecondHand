@@ -1,9 +1,11 @@
 .mat-mdc-dialog-container .mat-mdc-dialog-content {
   padding: 0 !important;
 }
+
 .mat-mdc-dialog-content {
   max-height: none !important;
 }
+
 .mat-mdc-dialog-surface {
   border-radius: 12px !important;
 }
@@ -13,4 +15,4 @@ button {
   border: none;
   outline: none;
   box-shadow: none;
-}
+}/*# sourceMappingURL=global.css.map */

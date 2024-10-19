@@ -1,0 +1,33 @@
+.container {
+  padding: 6px 20px;
+}
+.container .title-container {
+  display: flex;
+}
+.container .selection-list {
+  width: 320px;
+  padding: 14px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.container .selection-list .selection-button {
+  text-align: center;
+  padding: 0.72em 0.86em;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 0.28em;
+  background-color: rgb(255, 255, 255);
+  color: rgb(54, 54, 54);
+  font-size: 0.875rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.container .selection-list .selection-button:hover {
+  color: rgb(255, 113, 0);
+  border-color: rgb(255, 113, 0);
+}
+.container .selection-list .selected-button {
+  color: rgb(255, 113, 0);
+  border-color: rgb(255, 113, 0);
+  background-color: #fffaf5;
+}/*# sourceMappingURL=multi-select.component.css.map */

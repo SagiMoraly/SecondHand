@@ -3,20 +3,23 @@ import { CommonModule } from '@angular/common';
 import { ForsaleComponent } from './pages/forsale/forsale.component';
 import { RentComponent } from './pages/rent/rent.component';
 import { PublishComponent } from './pages/publish/publish.component';
-import { SearchRealestateComponent } from './components/search-realestate/search-realestate.component';
-import { RealestateCardComponent } from './components/realestate-card/realestate-card.component';
+import { SearchRealestateComponent } from './components/estate-list/search-realestate/search-realestate.component';
+import { RealestateCardComponent } from './components/estate-list/realestate-card/realestate-card.component';
 import { RealestateDetailComponent } from './pages/realestate-detail/realestate-detail.component';
-import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
-import { RangeSliderComponent } from './components/range-slider/range-slider.component';
+import { AutocompleteComponent } from './components/estate-list/autocomplete/autocomplete.component';
+import { RangeSliderComponent } from './components/estate-list/range-slider/range-slider.component';
 import { SharedModule } from '../shared/shared.module';
-import { MultiSelectComponent } from './components/multi-select/multi-select.component';
-import { RoomSelectionComponent } from './components/room-selection/room-selection.component';
-import { MoreFiltersComponent } from './components/more-filters/more-filters.component';
+import { MultiSelectComponent } from './components/estate-list/multi-select/multi-select.component';
+import { RoomSelectionComponent } from './components/estate-list/room-selection/room-selection.component';
+import { MoreFiltersComponent } from './components/estate-list/more-filters/more-filters.component';
 import { SanitizeHtmlPipePipe } from './pips/sanitize-html-pipe.pipe';
-import { RangeSliderFloorComponent } from './components/range-slider-floor/range-slider-floor.component';
-import { RangeSliderSizeComponent } from './components/range-slider-size/range-slider-size.component';
+import { RangeSliderFloorComponent } from './components/estate-list/range-slider-floor/range-slider-floor.component';
+import { RangeSliderSizeComponent } from './components/estate-list/range-slider-size/range-slider-size.component';
 import { OutSideClickDirective } from './directives/out-side-click.directive';
-import { PaginatorComponent } from './components/paginator/paginator.component';
+import { PaginatorComponent } from './components/estate-list/paginator/paginator.component';
+import { PublishTypeComponent } from './components/publish/publish-type/publish-type.component';
+import { NavbarComponent } from './components/publish/navbar/navbar.component';
+import { FormAddComponent } from './components/publish/estate-add/form-add/form-add.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
     RangeSliderFloorComponent,
     RangeSliderSizeComponent,
     OutSideClickDirective,
-    PaginatorComponent
+    PaginatorComponent,
+    PublishTypeComponent,
+    NavbarComponent,
+    FormAddComponent,
   ],
   imports: [CommonModule, SharedModule],
 })

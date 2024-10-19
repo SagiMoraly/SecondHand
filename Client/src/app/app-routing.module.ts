@@ -14,48 +14,61 @@ import { RealestateDetailComponent } from './realestate/pages/realestate-detail/
 
 const routes: Routes = [
   {
-    path:"login", component: LoginComponent
+    path: 'login',
+    component: LoginComponent,
   },
   {
-    path:"signup", component:SignupComponent
+    path: 'signup',
+    component: SignupComponent,
   },
   {
-    path:"", component:CoreComponent,children:[
+    path: 'publish',
+    component: PublishComponent,
+  },
+  {
+    path: '',
+    component: CoreComponent,
+    children: [
       {
-        path:"", component:HomeComponent
+        path: '',
+        component: HomeComponent,
       },
       {
-        path:"favorites", component:FavoriteComponent
+        path: 'favorites',
+        component: FavoriteComponent,
       },
       {
-        path:"publish", component:PublishComponent
+        path: 'realestate',
+        children: [
+          {
+            path: 'forsale',
+            component: ForsaleComponent,
+          },
+          {
+            path: 'rent',
+            component: RentComponent,
+          },
+          {
+            path: ':id',
+            component: RealestateDetailComponent,
+          },
+          {
+            path: '',
+            redirectTo: 'forsale',
+            pathMatch: 'full',
+          },
+        ],
       },
       {
-        path:"realestate", children:[
-          {
-            path:"forsale", component:ForsaleComponent
-          },
-          {
-            path:"rent", component:RentComponent
-          },
-          {
-            path:":id", component:RealestateDetailComponent
-          },
-          {
-            path:"", redirectTo: "forsale", pathMatch: "full"
-          },
-        ]
+        path: '*',
+        component: NotFoundComponent,
       },
-      {
-        path:"*" , component:NotFoundComponent
-      }
-
-    ]
+    ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
