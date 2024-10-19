@@ -19,7 +19,7 @@ import { OutSideClickDirective } from './directives/out-side-click.directive';
 import { PaginatorComponent } from './components/estate-list/paginator/paginator.component';
 import { PublishTypeComponent } from './components/publish/publish-type/publish-type.component';
 import { NavbarComponent } from './components/publish/navbar/navbar.component';
-import { FormAddComponent } from './components/publish/estate-add/form-add/form-add.component';
+import { FormAddComponent } from './pages/publish/form-add/form-add.component';
 
 @NgModule({
   declarations: [

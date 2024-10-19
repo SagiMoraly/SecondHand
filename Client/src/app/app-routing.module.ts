@@ -11,6 +11,8 @@ import { ForsaleComponent } from './realestate/pages/forsale/forsale.component';
 import { RentComponent } from './realestate/pages/rent/rent.component';
 import { NotFoundComponent } from './core/pages/not-found/not-found.component';
 import { RealestateDetailComponent } from './realestate/pages/realestate-detail/realestate-detail.component';
+import { FormAddComponent } from './realestate/pages/publish/form-add/form-add.component';
+import { PublishTypeComponent } from './realestate/components/publish/publish-type/publish-type.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,16 @@ const routes: Routes = [
   {
     path: 'publish',
     component: PublishComponent,
+    children: [
+      {
+        path: 'realestate',
+        component: FormAddComponent,
+      },
+      {
+        path: '',
+        component: PublishTypeComponent,
+      },
+    ],
   },
   {
     path: '',

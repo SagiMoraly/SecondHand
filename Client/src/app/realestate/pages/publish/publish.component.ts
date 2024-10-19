@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './publish.component.scss',
 })
 export class PublishComponent {
-  stage = 0;
+  type: undefined | number;
 
-  nextStage() {
-    this.stage++;
+  selectType(number: number) {
+    this.type = number;
+    console.log(this.type === number, this.type, number);
   }
 }
