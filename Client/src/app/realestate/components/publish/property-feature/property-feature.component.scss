@@ -1,0 +1,39 @@
+.feature-multi-container{
+    padding: 14px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    .selection-button {
+        padding: .51em 1em;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 0.28em;
+        background-color: rgb(255, 255, 255);
+        color: rgb(54, 54, 54);
+        font-size: 0.875rem;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 100%;
+        cursor: pointer;
+        svg{
+            font-size: 1.5rem;
+            margin-left: 4px;
+        }
+        &:hover {
+          color: rgb(255, 113, 0);
+          border-color: rgb(255, 113, 0);
+        }
+    }
+    .selected-button {
+      color: rgb(255, 113, 0);
+      border-color: rgb(255, 113, 0);
+      background-color: #fffaf5; //for clicked on
+    }
+    .property-icon{
+        display: inline-block;
+        margin-right: 8px;
+        width: 1em;
+        height: 1em;
+    }
+}

@@ -1,0 +1,34 @@
+<section  [ngClass]="(!show && !!data) ? 'grayed-out' : '' ">
+    <div class="title">
+        <div class="stage-icon">1</div>
+        <h2>אני רוצה למכור נכס</h2>
+        <div class="edit-icon" [hidden]="!(!show && !!data)">
+            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 4c.5 0 .979.198 1.332.55l2.01 2.008a1.88 1.88 0 01.001 2.66l-9.236 9.247a.747.747 0 01-.327.191l-5.032 1.41a.747.747 0 01-.92-.918l1.413-5.025a.746.746 0 01.19-.325L14.37 4.55C14.722 4.198 15.2 4 15.7 4zm-2.806 4.137l-6.568 6.576-1.002 3.56 3.564-1 6.557-6.565-2.551-2.571zM15.7 5.491a.392.392 0 00-.276.114L13.77 7.261l2.551 2.571 1.667-1.668a.392.392 0 000-.552l-2.01-2.007a.391.391 0 00-.277-.114z" fill="currentColor"></path></svg>
+        </div>
+    </div>
+    <div
+    [hidden]="!show">
+        <form 
+            [formGroup]="form"
+            (ngSubmit)="onSubmit()">
+            <button (click)="setType(1)" type="submit" [ngClass]="myType(1) ? 'selected' : '' ">
+                <img src="images/publish/Purchase.svg" alt="Purchase">
+                <div class="button-title">מכירה</div>
+            </button>
+            <button>
+                <img src="images/publish/Rent.svg" alt="Rent">
+                <div class="button-title">השכרה</div>
+            </button>
+            <button>
+                <img src="images/publish/commercial_active.svg" alt="commercial">
+                <div class="button-title">מסחרי</div>
+                <div class="button-subtitle">מחסנים,קליניקות,משרדים</div>
+            </button>
+            <button>
+                <img src="images/publish/business-off.svg" alt="business-off">
+                <div class="button-title">עסקים למכירה</div>
+                <div class="button-subtitle">הייטק,בתי קפה וכו'</div>
+            </button>
+        </form>
+    </div>
+</section>

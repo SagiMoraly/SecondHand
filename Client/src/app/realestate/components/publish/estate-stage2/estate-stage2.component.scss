@@ -1,0 +1,167 @@
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0px 16px 0px 16px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    color: rgb(54, 54, 54);
+    &.grayed-out{
+        background: rgb(248, 248, 248);
+        border-color: rgb(220, 220, 220);
+        .title{
+            h2{
+               color: rgb(153, 153, 153); 
+            }
+            svg{
+                width: 1.5rem;
+                height: 1.5rem;
+                color: gray;
+            }
+        }
+    }
+    .title{
+        display: flex;
+        font-size: 1rem;
+        // margin-top: 10px;
+        align-items: center;
+        h2{
+            font-weight: 400;
+            margin-left: auto;
+        }
+        .stage-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgb(15,202,128);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: rgb(15,202,128);
+            line-height: 1;
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-left: 10px;
+            content: "";
+        }
+    }
+    form{
+        input[type="text"]{
+            font-size: 1rem;
+            min-height: 42px;
+            outline: none;
+            border: none;
+            border: 1px solid rgb(204, 204, 204);
+            padding: 0 11px;
+            border-radius: 4px;
+            &:focus{
+                outline: 1px solid rgb(54, 54, 54);
+            }
+        }
+        .divider{
+            height: 1px;
+            background-color: rgb(238,238,238);
+            margin:   24px 0;
+        }
+        .bold-title{
+            font-size: 0.875rem;
+            color: rgb(54,54,54);
+            font-weight: 500;
+            margin-bottom: 4px;
+            line-height: 20px;
+        }
+        .mid-input-length{
+            width: 260px;
+        }
+        .small-input-length{
+            width: 120px;
+        }
+        .form-sub-container{
+            display: flex;
+            flex-direction: column;
+            padding: 15px 24px;
+            .sub-title{
+                margin-bottom: 30px;
+                font-size: 0.875rem;
+            }
+            .disclaimer{
+                font-size: 11px;
+                line-height: 13px;
+                margin-top: 4px;
+            }
+            .notfound-link{
+                font-weight: 500;
+                color: #ff7100;
+                line-height: 23px;
+                cursor: pointer;
+                margin: 24px 0;
+            }
+            .floor-container{
+                margin-top: 24px;
+                display: flex;
+                gap: 15px;
+                .floor-sub-container{
+                    gap: 15px;
+                    display: flex;
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .floor-checkbox{
+                    margin-top: 32px;
+                }
+            }
+            .disabled-lable{
+                font-size: 0.875rem;
+                color: rgb(204, 204, 204);
+                font-weight: 500;
+                margin-bottom: 4px;
+                line-height: 20px;
+                margin-top: 12px;
+            }
+            .disclaimer2{
+                font-size: 0.875rem;
+                margin-top: 4px;
+                color: rgb(153,153,153);
+                line-height: 16px;
+                margin-bottom: 12px;
+            }
+        }
+        .checkbox-container{
+            font-size: 0.875rem;
+            display: flex;
+            input{
+                margin-left: 5px;
+            }
+        }
+        .button-container{
+            margin-top: 40px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            .back-button{
+                cursor: pointer;
+                min-height: 36px;
+                padding: 0 18px;
+                border: 1px solid rgb(204, 204, 204);
+                border-radius: 30px;
+            }
+            .next-button{
+                cursor: pointer;
+                min-height: 36px;
+                padding: 0 18px;
+                background-color: white;
+                color: rgb(255,113,0);
+                border: 1px solid rgb(255,113,0);
+                border-radius: 30px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.bottom-space{
+    margin-bottom: 24px;
+}

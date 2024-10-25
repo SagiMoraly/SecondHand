@@ -1,0 +1,83 @@
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0px 16px 0px 16px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    &.grayed-out{
+        background: rgb(248, 248, 248);
+        border-color: rgb(220, 220, 220);
+        .title{
+            h2{
+               color: rgb(153, 153, 153); 
+            }
+            svg{
+                width: 1.5rem;
+                height: 1.5rem;
+                color: gray;
+            }
+        }
+    }
+    .title{
+        display: flex;
+        font-size: 1rem;
+        // margin-top: 10px;
+        align-items: center;
+        h2{
+            font-weight: 400;
+            margin-left: auto;
+        }
+        .stage-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgb(15,202,128);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: rgb(15,202,128);
+            line-height: 1;
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-left: 10px;
+            content: "";
+        }
+    }
+    form{
+        padding-top: 10px;
+        padding-bottom: 30px;
+        display: flex;
+        gap: 30px;
+        button{
+            flex: 1 1;
+            width: 100%;
+            display: block;
+            cursor: pointer;
+            padding: 12px 0 22px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: white;
+            border: 1px solid rgb(204,204,204);
+            .button-title{
+                color: rgb(54, 54, 54);
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            .button-subtitle{
+                color: rgb(153, 153, 153);
+            }
+            &.selected{
+                border: 1px solid rgb(255,113,0);
+                .button-title{
+                    color: rgb(255,113,0);
+                }
+            }
+            &:hover{
+                .button-title{
+                    color: rgb(255,113,0);
+                }
+            }
+        }
+    }
+}

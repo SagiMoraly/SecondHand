@@ -20,6 +20,16 @@ import { PaginatorComponent } from './components/estate-list/paginator/paginator
 import { PublishTypeComponent } from './components/publish/publish-type/publish-type.component';
 import { NavbarComponent } from './components/publish/navbar/navbar.component';
 import { FormAddComponent } from './pages/publish/form-add/form-add.component';
+import { EstateStage1Component } from './components/publish/estate-stage1/estate-stage1.component';
+import { EstateStage2Component } from './components/publish/estate-stage2/estate-stage2.component';
+import { EstateStage3Component } from './components/publish/estate-stage3/estate-stage3.component';
+import { EstateStage4Component } from './components/publish/estate-stage4/estate-stage4.component';
+import { EstateStage5Component } from './components/publish/estate-stage5/estate-stage5.component';
+import { EstateStage6Component } from './components/publish/estate-stage6/estate-stage6.component';
+import { EstateStage7Component } from './components/publish/estate-stage7/estate-stage7.component';
+import { SelectOptionComponent } from './components/publish/select-option/select-option.component';
+import { SelectOption2Component } from './components/publish/select-option2/select-option2.component';
+import { PropertyFeatureComponent } from './components/publish/property-feature/property-feature.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +52,16 @@ import { FormAddComponent } from './pages/publish/form-add/form-add.component';
     PublishTypeComponent,
     NavbarComponent,
     FormAddComponent,
+    EstateStage1Component,
+    EstateStage2Component,
+    EstateStage3Component,
+    EstateStage4Component,
+    EstateStage5Component,
+    EstateStage6Component,
+    EstateStage7Component,
+    SelectOptionComponent,
+    SelectOption2Component,
+    PropertyFeatureComponent,
   ],
   imports: [CommonModule, SharedModule],
 })

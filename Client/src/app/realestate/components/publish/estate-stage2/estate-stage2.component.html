@@ -1,0 +1,125 @@
+<section  [ngClass]="(!show && !!data) ? 'grayed-out' : '' ">
+    <div class="title">
+        <div class="stage-icon">2</div>
+        <h2>כתובות הנכס</h2>
+        <div class="edit-icon" [hidden]="!(!show && !!data)">
+            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 4c.5 0 .979.198 1.332.55l2.01 2.008a1.88 1.88 0 01.001 2.66l-9.236 9.247a.747.747 0 01-.327.191l-5.032 1.41a.747.747 0 01-.92-.918l1.413-5.025a.746.746 0 01.19-.325L14.37 4.55C14.722 4.198 15.2 4 15.7 4zm-2.806 4.137l-6.568 6.576-1.002 3.56 3.564-1 6.557-6.565-2.551-2.571zM15.7 5.491a.392.392 0 00-.276.114L13.77 7.261l2.551 2.571 1.667-1.668a.392.392 0 000-.552l-2.01-2.007a.391.391 0 00-.277-.114z" fill="currentColor"></path></svg>
+        </div>
+    </div>
+    <div
+    [hidden]="!show">
+        <form 
+            [formGroup]="form"
+            (ngSubmit)="onSubmit()">
+        <div class="form-sub-container">
+            <div class="sub-title">
+                סימנו עבורך את שדות החובה, שלא נפספס פרט חשוב
+            </div>
+            <label for="city" class="bold-title">
+                ישוב*
+            </label>
+            <input type="text" formControlName="city" name="city" placeholder="איפה נמצא הנכס?" class="mid-input-length">
+            <label for="street" class="bold-title">
+                רחוב*
+            </label>
+            <input type="text" formControlName="street" name="street" placeholder="הכנסת שם הרחוב" class="mid-input-length">
+            <div class="disclaimer">
+                לא ניתן יהיה לעדכן את שם הרחוב לאחר פרסום המודעה
+            </div>
+            <div class="notfound-link">
+                לא מצאת את הרחוב?
+            </div>
+            <label for="streetNumber" class="bold-title">
+                מס׳ בית*
+            </label>
+            <input type="text" formControlName="streetNumber" name="streetNumber" placeholder="מספר בית" class="small-input-length">
+            <div class="floor-container">
+                <div class="floor-sub-container">
+                    <div>
+                        <label for="floor" class="bold-title">
+                            קומה*
+                        </label>
+                        <input type="text" formControlName="floor" name="floor" placeholder="מספר קומה" class="small-input-length">
+                    </div>
+                    <div>
+                        <label for="floorTotal" class="bold-title">
+                            סה״כ קומות בבניין*
+                        </label>
+                        <input type="text" formControlName="floorTotal" name="floorTotal" placeholder="סה״כ קומות" class="small-input-length">
+                    </div>
+                </div>
+                <div class="floor-checkbox">
+                    <input type="checkbox" name="bar" id=""> 
+                    <label for="bar">
+                        על עמודים
+                    </label>
+                </div>
+            </div>
+            <label for="neighborhood" class="disabled-lable">
+                שכונה
+            </label>
+            <input type="text" name="neighborhood" class="mid-input-length" disabled>
+            <div class="disclaimer2">
+                המידע הזה מגיע מגוף ממשלתי ולא ניתן לשינוי
+            </div>
+            <label for="area" class="disabled-lable">
+                אזור
+            </label>
+            <input type="text" name="area" class="mid-input-length" disabled>
+            <div class="disclaimer2">
+                המידע הזה מגיע מגוף ממשלתי ולא ניתן לשינוי
+            </div>
+            <div class="divider"></div>
+            <div >
+                <div class="bottom-space">
+                    <label for="type" class="bold-title">
+                        סוג הנכס*
+                    </label>
+                    <app-select-option formControlName="type"  [placeholder]="'דירה או אולי פנטהאוז?'" [list]="propertyTypeList"></app-select-option>
+                </div>
+                <div class="bottom-space">
+                    <label for="condition" class="bold-title">
+                        מצב הנכס*
+                    </label>
+                    <app-select-option formControlName="condition" [placeholder]="'משופץ? חדש מקבלן?'" [list]="stateList"></app-select-option>
+                </div>
+            </div >
+            <div>
+                <div class="bottom-space">
+                    <div class="bold-title">
+                        כיווני אוויר
+                    </div>
+                    <app-select-option2 formControlName="airWays" [options]="airwayList"></app-select-option2>
+                </div>
+                <div class="bottom-space">
+                    <div class="bold-title">
+                        נוף פתוח
+                    </div>
+                    <app-select-option2 formControlName="openView" [options]="viewList"></app-select-option2>
+                </div>
+            </div>
+            <div class="checkbox-container">
+                <input formControlName="rearAsset" type="checkbox" name="rearAsset" id="rearAsset">
+    <label for="rearAsset">
+        נכס עורפי
+    </label>        
+    </div>
+    <div class="divider"></div>
+    <div class="checkbox-container">
+        <input type="checkbox" name="" id="">
+        <div>
+            אני רוצה לקבל עדכון חודשי במייל עם הערכת שווי מעודכנת עבור הנכס, עסקאות באיזור והצעות מקצועיות מיועצי נדל״ן
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="back-button">
+            חזרה
+        </button>
+        <button type="submit" class="next-button">
+            המשך לשלב הבא
+        </button>
+    </div>
+        </div>
+        </form>
+    </div>
+</section>
