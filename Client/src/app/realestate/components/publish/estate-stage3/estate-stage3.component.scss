@@ -1,124 +1,129 @@
-section{
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0px 16px 0px 16px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  &.grayed-out {
+    background: rgb(248, 248, 248);
+    border-color: rgb(220, 220, 220);
+    .title {
+      h2 {
+        color: rgb(153, 153, 153);
+      }
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: gray;
+      }
+    }
+  }
+  .title {
     display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 0px 16px 0px 16px;
-    border-radius: 10px;
-    border: 1px solid #e6e6e6;
-    &.grayed-out{
-        background: rgb(248, 248, 248);
-        border-color: rgb(220, 220, 220);
-        .title{
-            h2{
-               color: rgb(153, 153, 153); 
-            }
-            svg{
-                width: 1.5rem;
-                height: 1.5rem;
-                color: gray;
-            }
-        }
+    font-size: 1rem;
+    // margin-top: 10px;
+    align-items: center;
+    h2 {
+      font-weight: 400;
+      margin-left: auto;
     }
-    .title{
+    .stage-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid rgb(15, 202, 128);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: rgb(15, 202, 128);
+      line-height: 1;
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-left: 10px;
+      content: "";
+    }
+  }
+  form {
+    .button-container {
+      margin-top: 40px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      .back-button {
+        cursor: pointer;
+        min-height: 36px;
+        padding: 0 18px;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 30px;
+      }
+      .next-button {
+        cursor: pointer;
+        min-height: 36px;
+        padding: 0 18px;
+        background-color: white;
+        color: rgb(255, 113, 0);
+        border: 1px solid rgb(255, 113, 0);
+        border-radius: 30px;
+        font-weight: 500;
+      }
+    }
+    .input-field {
+      margin-bottom: 24px;
+    }
+    .bold-title {
+      font-size: 0.875rem;
+      color: rgb(54, 54, 54);
+      font-weight: 500;
+      margin-bottom: 4px;
+      line-height: 20px;
+    }
+    .form-sub-container {
+      display: flex;
+      flex-direction: column;
+      padding: 15px 24px;
+    }
+    .divider {
+      height: 1px;
+      background-color: rgb(238, 238, 238);
+      margin: 24px 0;
+    }
+    .textareas-contianer {
+      .detail-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 10px 0 20px;
+        display: block;
+      }
+      .detail-sub-title {
         display: flex;
-        font-size: 1rem;
-        // margin-top: 10px;
-        align-items: center;
-        h2{
-            font-weight: 400;
-            margin-left: auto;
+        align-items: end;
+        width: 400px;
+        justify-content: space-between;
+      }
+      textarea {
+        outline: none;
+        resize: none;
+        border-radius: 4px;
+        transition: border-color 0.2s;
+        border: 1px solid rgb(204, 204, 204);
+        background-color: white;
+        overflow-x: hidden;
+        padding: 12px;
+        width: 400px;
+        height: 180px;
+        &:focus {
+          border-color: rgb(54, 54, 54);
         }
-        .stage-icon{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid rgb(15,202,128);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            color: rgb(15,202,128);
-            line-height: 1;
-            font-size: 1.125rem;
-            font-weight: 500;
-            margin-left: 10px;
-            content: "";
+        &:hover {
+          border-color: rgb(54, 54, 54);
         }
+        &::placeholder {
+          font-size: 1rem;
+          color: rgb(204, 204, 204);
+        }
+      }
     }
-    form{
-        .button-container{
-            margin-top: 40px;
-            margin-bottom: 12px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.875rem;
-            .back-button{
-                cursor: pointer;
-                min-height: 36px;
-                padding: 0 18px;
-                border: 1px solid rgb(204, 204, 204);
-                border-radius: 30px;
-            }
-            .next-button{
-                cursor: pointer;
-                min-height: 36px;
-                padding: 0 18px;
-                background-color: white;
-                color: rgb(255,113,0);
-                border: 1px solid rgb(255,113,0);
-                border-radius: 30px;
-                font-weight: 500;
-            }
-        }
-        .input-field{
-            margin-bottom: 24px;
-        }
-        .bold-title{
-            font-size: 0.875rem;
-            color: rgb(54,54,54);
-            font-weight: 500;
-            margin-bottom: 4px;
-            line-height: 20px;
-        }
-        .form-sub-container{
-            display: flex;
-            flex-direction: column;
-            padding: 15px 24px;
-        }
-        .divider{
-            height: 1px;
-            background-color: rgb(238,238,238);
-            margin:   24px 0;
-        }
-        .textareas-contianer{
-            .detail-title{
-                font-size: 1.1rem;
-                font-weight: 500;
-                margin: 10px 0 20px;
-                display: block;
-            
-            }
-            textarea{
-                outline: none;
-                resize: none;
-                border-radius: 4px;
-                transition: border-color .2s;
-                border: 1px solid rgb(204,204,204);
-                background-color: white;
-                overflow-x: hidden;
-                padding: 12px;
-                width: 400px;
-                height: 180px;
-                &:focus{
-                    border-color: rgb(54,54,54);
-                }
-                &:hover{
-                    border-color: rgb(54,54,54);
-                }
-                &::placeholder{
-                    font-size: 1rem;
-                    color: rgb(204, 204, 204);
-                }
-            }
-        }
-    }
+  }
 }
