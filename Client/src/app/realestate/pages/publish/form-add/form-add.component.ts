@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './form-add.component.scss'
 })
 export class FormAddComponent {
-  stage = 3
+  stage = 1
+
 
   formData: any[] = []
 

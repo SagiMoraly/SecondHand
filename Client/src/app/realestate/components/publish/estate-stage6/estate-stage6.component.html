@@ -1,1 +1,70 @@
-<p>estate-stage6 works!</p>
+<section  [ngClass]="(!show && !!data) ? 'grayed-out' : '' ">
+    <div class="title">
+        <div class="stage-icon">6</div>
+        <h2>פרטי התקשרות</h2>
+        <div class="edit-icon" [hidden]="!(!show && !!data)">
+            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 4c.5 0 .979.198 1.332.55l2.01 2.008a1.88 1.88 0 01.001 2.66l-9.236 9.247a.747.747 0 01-.327.191l-5.032 1.41a.747.747 0 01-.92-.918l1.413-5.025a.746.746 0 01.19-.325L14.37 4.55C14.722 4.198 15.2 4 15.7 4zm-2.806 4.137l-6.568 6.576-1.002 3.56 3.564-1 6.557-6.565-2.551-2.571zM15.7 5.491a.392.392 0 00-.276.114L13.77 7.261l2.551 2.571 1.667-1.668a.392.392 0 000-.552l-2.01-2.007a.391.391 0 00-.277-.114z" fill="currentColor"></path></svg>
+        </div>
+    </div>
+    <div
+    [hidden]="!show">
+        <form 
+            [formGroup]="form"
+            (ngSubmit)="onSubmit()">
+            <div class="sub-title">באיזה מספר המתעניינים יוכלו להשיג אותך?</div>
+            <div>
+                <label class="input-title" for="contactName">השם שלך*</label>
+                <input type="text" name="contactName"  formControlName="contactName">
+            </div>
+            <div>
+                <label class="input-title" for="contactPhone" >טלפון*</label>
+                <input type="text" name="contactPhone" formControlName="contactPhone">
+            </div>
+            <div class="add-contact">
+                <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.25 2.25c5.523 0 10 4.477 10 10s-4.477 10-10 10-10-4.477-10-10 4.477-10 10-10zm0 1.5a8.5 8.5 0 100 17 8.5 8.5 0 000-17zm.05 3.5a.75.75 0 01.743.648L13.05 8v3.25h3.25a.75.75 0 01.102 1.493l-.102.007h-3.25V16a.75.75 0 01-1.493.102L11.55 16v-3.25H8.3a.75.75 0 01-.102-1.493l.102-.007h3.25V8a.75.75 0 01.75-.75z" fill="currentColor"></path></svg>
+                הוספת איש קשר נוסף
+            </div>
+            <div>
+                <div class="checkbox-container small-text">
+                    <input type="checkbox" name="" id="">
+                    <div>אני רוצה שיופיע מספר וירטואלי במודעה שלי</div>
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.25 2.05c-5.633 0-10.2 4.567-10.2 10.2 0 5.633 4.567 10.2 10.2 10.2 5.633 0 10.2-4.567 10.2-10.2 0-5.633-4.567-10.2-10.2-10.2zm-8.3 10.2a8.3 8.3 0 1116.6 0 8.3 8.3 0 01-16.6 0zm8.197-5.45c-1.06 0-1.815.286-2.364.774a3.25 3.25 0 00-.94 1.512.929.929 0 00-.043.27c0 .408.322.607.58.68l.01.002.016.003c.066.012.151.027.24.027a.665.665 0 00.412-.135.815.815 0 00.271-.416c.127-.396.325-.717.605-.939.278-.22.652-.356 1.154-.356.524 0 .92.138 1.18.36.258.22.405.54.405.95 0 .283-.056.48-.2.682-.154.214-.412.44-.846.764-.345.249-.559.41-.716.553-.162.146-.262.27-.383.438-.351.47-.474.928-.474 1.74v.348c0 .215.08.395.227.518a.79.79 0 00.513.169c.182 0 .363-.05.5-.171a.663.663 0 00.217-.516v-.336c0-.454.077-.716.248-.95.182-.25.48-.48.975-.848.457-.34.827-.669 1.08-1.056.256-.393.386-.834.386-1.386 0-.813-.3-1.49-.844-1.962-.541-.469-1.305-.719-2.21-.719zm-.376 9.28a.99.99 0 00-.72.294c-.186.19-.29.458-.29.766 0 .307.104.574.29.765a.99.99 0 00.72.295c.56 0 1.01-.43 1.01-1.06 0-.63-.45-1.06-1.01-1.06z" fill="currentColor"></path></svg>
+                </div>
+                <div class="flex-line small-text">
+                    <div>המספר הוירטואלי יינתן בחינם בכפוף למדיניות השירות ולמעט במקרים המפורטים</div>
+                    <div class="mid-text-link">{{" כאן "}}</div>
+                </div>
+            </div> 
+            <div class="checkbox-containe flex-line small-text">
+                <input type="checkbox" name="" id="">
+                <div>קבל שיחות בשבת</div>
+                <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.25 2.05c-5.633 0-10.2 4.567-10.2 10.2 0 5.633 4.567 10.2 10.2 10.2 5.633 0 10.2-4.567 10.2-10.2 0-5.633-4.567-10.2-10.2-10.2zm-8.3 10.2a8.3 8.3 0 1116.6 0 8.3 8.3 0 01-16.6 0zm8.197-5.45c-1.06 0-1.815.286-2.364.774a3.25 3.25 0 00-.94 1.512.929.929 0 00-.043.27c0 .408.322.607.58.68l.01.002.016.003c.066.012.151.027.24.027a.665.665 0 00.412-.135.815.815 0 00.271-.416c.127-.396.325-.717.605-.939.278-.22.652-.356 1.154-.356.524 0 .92.138 1.18.36.258.22.405.54.405.95 0 .283-.056.48-.2.682-.154.214-.412.44-.846.764-.345.249-.559.41-.716.553-.162.146-.262.27-.383.438-.351.47-.474.928-.474 1.74v.348c0 .215.08.395.227.518a.79.79 0 00.513.169c.182 0 .363-.05.5-.171a.663.663 0 00.217-.516v-.336c0-.454.077-.716.248-.95.182-.25.48-.48.975-.848.457-.34.827-.669 1.08-1.056.256-.393.386-.834.386-1.386 0-.813-.3-1.49-.844-1.962-.541-.469-1.305-.719-2.21-.719zm-.376 9.28a.99.99 0 00-.72.294c-.186.19-.29.458-.29.766 0 .307.104.574.29.765a.99.99 0 00.72.295c.56 0 1.01-.43 1.01-1.06 0-.63-.45-1.06-1.01-1.06z" fill="currentColor"></path></svg>
+            </div>
+            <div class="divider"></div>
+            <div  class="flex-line small-text">
+                <input type="checkbox" name="" id="" (click)="checkThebox()">
+                <div>אני מאשר/ת את</div>
+                <div class="mid-text-link">התקנון*</div>
+                <div>ומדיניות הפרטיות באתר</div>
+            </div>
+            <div class="upgrades-container">
+                <div class="flex-line small-text">
+                    <div>רגע לפני בחירת מסלול, לא לשכוח להעיף מבט על אופציות השדרוג שלנו
+                    </div>
+                    <div class="heavy-font">
+                        שיעשו לך חיים קלים
+                    </div>
+                </div>
+                <img src="images/publish/rocketandairplain.PNG" alt="rocket and airplain">
+            </div>
+            <div class="button-container">
+                <button class="back-button">
+                    חזרה
+                </button>
+                <button type="submit" class="next-button">
+                    המשך לשלב הבא
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

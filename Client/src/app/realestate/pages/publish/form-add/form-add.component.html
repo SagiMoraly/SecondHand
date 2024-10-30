@@ -2,11 +2,11 @@
     <body>
         <app-estate-stage1 [show]="stage === 1" (formCompleted)="nextStageAndSaveData($event , 1)" [data]="formData[1]" (click)="editMe(formData[1] , 1)"></app-estate-stage1>
         <app-estate-stage2 [show]="stage === 2" (formCompleted)="nextStageAndSaveData($event , 2)" [data]="formData[2]" (click)="editMe(formData[2] , 2)"></app-estate-stage2>
-        <app-estate-stage3 [show]="stage === 3"></app-estate-stage3>
-        <app-estate-stage4 [show]="stage === 4"></app-estate-stage4>
-        <app-estate-stage5 [show]="stage === 5"></app-estate-stage5>
-        <app-estate-stage6 [show]="stage === 6"></app-estate-stage6>
-        <app-estate-stage7 [show]="stage === 7"></app-estate-stage7>
+        <app-estate-stage3 [show]="stage === 3" (formCompleted)="nextStageAndSaveData($event , 3)" [data]="formData[3]" (click)="editMe(formData[3] , 3)"></app-estate-stage3>
+        <app-estate-stage4 [show]="stage === 4" (formCompleted)="nextStageAndSaveData($event , 4)" [data]="formData[4]" (click)="editMe(formData[4] , 4)"></app-estate-stage4>
+        <app-estate-stage5 [show]="stage === 5" (formCompleted)="nextStageAndSaveData($event , 5)" [data]="formData[5]" (click)="editMe(formData[5] , 5)"></app-estate-stage5>
+        <app-estate-stage6 [show]="stage === 6" (formCompleted)="nextStageAndSaveData($event , 6)" [data]="formData[6]" (click)="editMe(formData[6] , 6)"></app-estate-stage6>
+        <app-estate-stage7 [show]="stage === 7" (formCompleted)="nextStageAndSaveData($event , 7)" [data]="formData[7]" (click)="editMe(formData[7] , 7)"></app-estate-stage7>
     </body>
 </main>
 

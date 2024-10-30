@@ -101,6 +101,14 @@ section {
         align-items: end;
         width: 400px;
         justify-content: space-between;
+        font-size: 0.875rem;
+        font-weight: 500;
+        .detail-sub-sub-title{
+            font-weight: 300;
+        }
+        .detail-count{
+            color: rgb(204, 204, 204);
+        }
       }
       textarea {
         outline: none;
@@ -123,6 +131,10 @@ section {
           font-size: 1rem;
           color: rgb(204, 204, 204);
         }
+      }
+      .textarea-helper-desc{
+        margin-top: 8px;
+        font-size: 0.75rem;
       }
     }
   }

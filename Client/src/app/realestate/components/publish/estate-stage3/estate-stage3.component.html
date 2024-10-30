@@ -54,6 +54,7 @@
         <div class="divider"></div>
         <div>
           <app-property-feature
+          formControlName="propertyFeature"
             (furnitureDetail)="setFurnitureDetail($event)"
           ></app-property-feature>
         </div>
@@ -62,7 +63,7 @@
           <div *ngIf="showFurnitureDetail">
             <div class="detail-sub-title">
               <label for="furnitureDetails">פרוט הריהוט: (עד 200 תוים)</label>
-              <div>{{ furnitureDetailsValue.length }}/200</div>
+              <div class="detail-count">{{ furnitureDetailsValue.length }}/200</div>
             </div>
             <!-- edit here -->
             <textarea
@@ -77,7 +78,7 @@
             <div class="detail-sub-title">
               <div>
                 <label for="details">פרוט הנכס</label>
-                <div>הידעת: מודעה ללא תיאור, כמעט ולא מקבלת שיחות</div>
+                <div class="detail-sub-sub-title">הידעת: מודעה ללא תיאור, כמעט ולא מקבלת שיחות</div>
               </div>
               <div class="detail-count">{{ detailsValue.length }}/400</div>
             </div>
@@ -90,7 +91,7 @@
               [(ngModel)]="detailsValue"
               placeholder="זה המקום לתאר את הפרטים הבולטים, למשל, האם נערך שיפוץ במבנה, מה שופץ, כיווני אוויר, האווירה ברחוב וכו'"
             ></textarea>
-            <div>
+            <div class="textarea-helper-desc">
               אין צורך להוסיף מספר טלפון כחלק מהתיאור, בהמשך התהליך יש אזור
               מסודר לזה
             </div>

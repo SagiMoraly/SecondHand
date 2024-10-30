@@ -18,7 +18,7 @@ export class SelectOptionComponent implements ControlValueAccessor {
   @Input() list!: string[]
 
   onChange: OnChnageFn<string> = () => {}
-  onTouchFn = () => {}
+  onTouchFn: OnTouchFn = () => {}
   selected: string | undefined
   open = false
 

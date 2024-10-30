@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-estate-stage3',
@@ -53,13 +53,13 @@ export class EstateStage3Component implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      rooms: [],
-      showerRooms: [],
-      parking: [],
-      balcony: [],
-      features: [],
-      furnitureDetails: [],
-      details: [],
+      rooms: ['',Validators.required],
+      showerRooms: ['',Validators.required],
+      parking: ['',Validators.required],
+      balcony: ['',Validators.required],
+      propertyFeature: [[],Validators.required],
+      furnitureDetails: [''],
+      details: ['',Validators.required],
     });
   }
 

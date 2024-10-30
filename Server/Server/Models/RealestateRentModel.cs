@@ -25,7 +25,7 @@ namespace Server.Models
         public int Balcony { get; set; }// 0-4
         public List<PropertyFeature> Features { get; set; } // JSON or CSV for features list
         public string ?FurnitureDetails { get; set; } // Can be null
-        public string Details { get; set; }
+        public string  { get; set; }
 
         // Rent-specific properties
         public int NumberOfPay { get; set; }
