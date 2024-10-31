@@ -8,6 +8,8 @@ using Server.Data;
 using Server.IRepository;
 using Server.Repository;
 using Server.Utilitys;
+using Server.Services;
+using Server.IPepository;
 
 // => webaplication
 var builder = WebApplication.CreateBuilder(args);
@@ -57,9 +59,9 @@ builder.Services.AddControllers().AddNewtonsoftJson(opt =>
     );
 // implament the repositories
 builder.Services.AddTransient<IUsersRepository, UsersRepository>();
-//builder.Services.AddTransient<IBooksRepository, BooksRepository>();
-//builder.Services.AddTransient<ICartsRepository, CartsRepository>();
+builder.Services.AddTransient<IRealestateSaleRepository, RealestateSaleRepository>();
 builder.Services.AddSingleton<UtilitysFunctions, UtilitysFunctions>();
+builder.Services.AddSingleton<ImageService, ImageService>();
 // swagers
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

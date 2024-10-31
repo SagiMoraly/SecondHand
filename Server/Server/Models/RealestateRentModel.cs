@@ -25,7 +25,6 @@ namespace Server.Models
         public int Balcony { get; set; }// 0-4
         public List<PropertyFeature> Features { get; set; } // JSON or CSV for features list
         public string ?FurnitureDetails { get; set; } // Can be null
-        public string  { get; set; }
 
         // Rent-specific properties
         public int NumberOfPay { get; set; }
@@ -38,7 +37,7 @@ namespace Server.Models
         public decimal SquareMeter { get; set; }
         public decimal Price { get; set; } //  rent price >= 100
 
-        public List<string> Image { get; set; } // Placeholder for images or videos
+        public string ImagesPath { get; set; } // Placeholder for images or videos
         public string ContactPhone { get; set; }
         public string ContactName { get; set; }
         public string ContactPhone2 { get; set; }

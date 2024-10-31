@@ -78,7 +78,7 @@ export class EstateStage2Component implements OnInit{
     condition:[this.data?.condition, Validators.required],
     airWays:[this.data?.airWays, Validators.required],
     openView:[this.data?.openView, Validators.required],
-    rearAsset:[this.data?.rearAsset]
+    rearAsset:[false]
   })  
   }
 

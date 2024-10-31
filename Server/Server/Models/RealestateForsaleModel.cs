@@ -33,7 +33,7 @@ namespace Server.Models
         public decimal SquareMeter { get; set; }
         public decimal Price { get; set; } // Sale price >= 10K
 
-        public List<string> Image { get; set; } // Placeholder for images or videos
+        public string ImagesPath { get; set; } // Placeholder for images or videos
         public string ContactPhone { get; set; }
         public string ContactName { get; set; }
         public string ContactPhone2 { get; set; }

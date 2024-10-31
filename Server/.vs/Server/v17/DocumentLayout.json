@@ -3,44 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\models\\realestaterentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\models\\realestaterentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\repository\\realestatesalerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\repository\\realestatesalerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\models\\realestateforsalemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\models\\realestateforsalemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\models\\signupusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\models\\signupusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\repository\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\repository\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\controllers\\realestatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\controllers\\realestatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\models\\clientrealestatesaleobjctmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\models\\clientrealestatesaleobjctmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\ipepository\\iusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\ipepository\\iusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\repository\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\repository\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\controllers\\realestatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\controllers\\realestatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|c:\\users\\ogoritoo\\desktop\\programing\\javascript\\secondhand\\secondhand\\server\\server\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0526B8B9-D37C-4498-A720-B8EB5B1A4AD5}|Server\\Server.csproj|solutionrelative:server\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,129 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RealestateRentModel.cs",
-              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\RealestateRentModel.cs",
-              "RelativeDocumentMoniker": "Server\\Models\\RealestateRentModel.cs",
-              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\RealestateRentModel.cs*",
-              "RelativeToolTip": "Server\\Models\\RealestateRentModel.cs*",
-              "ViewState": "AgIAACcAAAAAAAAAAABCwCwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T10:46:31.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RealestateForsaleModel.cs",
-              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\RealestateForsaleModel.cs",
-              "RelativeDocumentMoniker": "Server\\Models\\RealestateForsaleModel.cs",
-              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\RealestateForsaleModel.cs",
-              "RelativeToolTip": "Server\\Models\\RealestateForsaleModel.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAIwDMAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T09:55:35.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUsersRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\IPepository\\IUsersRepository.cs",
-              "RelativeDocumentMoniker": "Server\\IPepository\\IUsersRepository.cs",
-              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\IPepository\\IUsersRepository.cs",
-              "RelativeToolTip": "Server\\IPepository\\IUsersRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T06:10:38.781Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Program.cs",
-              "RelativeDocumentMoniker": "Server\\Program.cs",
-              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Program.cs",
-              "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwBoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T08:06:29.779Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RealestateController.cs",
-              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Controllers\\RealestateController.cs",
-              "RelativeDocumentMoniker": "Server\\Controllers\\RealestateController.cs",
-              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Controllers\\RealestateController.cs",
-              "RelativeToolTip": "Server\\Controllers\\RealestateController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T07:57:58.306Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Controllers\\UserController.cs",
               "RelativeToolTip": "Server\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAASwBgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAiwCkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T07:55:35.397Z"
+              "WhenOpened": "2024-10-31T12:14:37.57Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "RealestateController.cs",
+              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Controllers\\RealestateController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\RealestateController.cs",
+              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Controllers\\RealestateController.cs",
+              "RelativeToolTip": "Server\\Controllers\\RealestateController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAewBgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:19:01.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RealestateSaleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Repository\\RealestateSaleRepository.cs",
+              "RelativeDocumentMoniker": "Server\\Repository\\RealestateSaleRepository.cs",
+              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Repository\\RealestateSaleRepository.cs",
+              "RelativeToolTip": "Server\\Repository\\RealestateSaleRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA4wBQAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T13:29:48.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ImageService.cs",
+              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Services\\ImageService.cs",
+              "RelativeDocumentMoniker": "Server\\Services\\ImageService.cs",
+              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Services\\ImageService.cs",
+              "RelativeToolTip": "Server\\Services\\ImageService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T13:53:34.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientRealestateSaleObjctModel.cs",
+              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\ClientRealestateSaleObjctModel.cs",
+              "RelativeDocumentMoniker": "Server\\Models\\ClientRealestateSaleObjctModel.cs",
+              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\ClientRealestateSaleObjctModel.cs",
+              "RelativeToolTip": "Server\\Models\\ClientRealestateSaleObjctModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T07:30:15.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UsersRepository.cs",
               "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Repository\\UsersRepository.cs",
               "RelativeDocumentMoniker": "Server\\Repository\\UsersRepository.cs",
               "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Repository\\UsersRepository.cs",
               "RelativeToolTip": "Server\\Repository\\UsersRepository.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T06:30:17.711Z"
+              "WhenOpened": "2024-10-30T13:20:37.019Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\UserDTO.cs",
-              "RelativeDocumentMoniker": "Server\\Models\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\UserDTO.cs",
-              "RelativeToolTip": "Server\\Models\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\Program.cs",
+              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Program.cs",
+              "RelativeToolTip": "Server\\Program.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAD0AAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T07:32:35.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserModel.cs",
-              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\UserModel.cs",
-              "RelativeDocumentMoniker": "Server\\Models\\UserModel.cs",
-              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\UserModel.cs",
-              "RelativeToolTip": "Server\\Models\\UserModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T07:25:59.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SignupUserModel.cs",
-              "DocumentMoniker": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\SignupUserModel.cs",
-              "RelativeDocumentMoniker": "Server\\Models\\SignupUserModel.cs",
-              "ToolTip": "C:\\Users\\ogoritoo\\Desktop\\Programing\\JavaScript\\SecondHand\\SecondHand\\Server\\Server\\Models\\SignupUserModel.cs",
-              "RelativeToolTip": "Server\\Models\\SignupUserModel.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T06:40:02.492Z"
+              "WhenOpened": "2024-10-30T13:29:59.142Z",
+              "EditorCaption": ""
             }
           ]
         }

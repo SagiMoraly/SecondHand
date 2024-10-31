@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "Server.Controllers.RealestateController",
+    "Method": "AddSale",
+    "RelativePath": "api/Realestate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientObj",
+        "Type": "System.Object",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Server.Controllers.UserController",
     "Method": "GetUser",
     "RelativePath": "api/User",

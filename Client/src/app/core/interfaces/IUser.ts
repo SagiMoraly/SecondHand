@@ -1,5 +1,4 @@
-import { IRealestateForsale } from "./IRealestateForsale"
-import { IRealestateRent } from "./IRealestateRent"
+
 
 export interface IUser{
     id : string  
@@ -14,3 +13,6 @@ export interface IUser{
     realestateRent : IRealestateRent[] ,
     realestateForsale : IRealestateForsale[] 
 }
+
+interface IRealestateRent{}
+interface IRealestateForsale{}
