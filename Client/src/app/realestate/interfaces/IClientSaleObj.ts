@@ -1,5 +1,5 @@
 export interface IClientSaleObj{
-    images: [];
+    images: FormData;
     realestateData: {
         city: string;
         street: string;

@@ -18,14 +18,14 @@ namespace Server.Controllers
         }
 
         [HttpPost]
-        [Authorize]
-        public async Task<ActionResult<bool>> AddSale([FromBody]dynamic clientObj )
-        {
-            var somthing = clientObj;
-              bool result = await _saleRepository.AddSale(clientObj);
-            if(result == false)
+        public async Task<ActionResult<bool>> AddSale([FromBody]RealestateForsaleModel clientSaleObj)
+        { 
+            //Console.WriteLine(clientObj.image.FileName);
+            //var result = clientObj.image.FileName;
+              bool result = await _saleRepository.AddSale(clientSaleObj);
+            if (result == null)
             {
-                return BadRequest(result);
+                return BadRequest(result) ;
             }
             return Ok(result);
         }

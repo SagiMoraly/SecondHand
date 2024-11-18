@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "Server.Controllers.ImageController",
+    "Method": "uploadImages",
+    "RelativePath": "api/Image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "images",
+        "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Server.Controllers.RealestateController",
     "Method": "AddSale",
     "RelativePath": "api/Realestate",
@@ -8,8 +34,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "clientObj",
-        "Type": "System.Object",
+        "Name": "clientSaleObj",
+        "Type": "Server.Models.RealestateForsaleModel",
         "IsRequired": true
       }
     ],

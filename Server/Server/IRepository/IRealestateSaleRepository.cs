@@ -4,6 +4,6 @@ namespace Server.IPepository
 {
     public interface IRealestateSaleRepository
     {
-        public Task<bool> AddSale(ClientRealestateSaleObjctModel clientObj);
+        public Task<bool> AddSale(RealestateForsaleModel clientObj);
     }
 }

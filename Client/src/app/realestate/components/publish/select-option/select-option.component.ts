@@ -17,24 +17,24 @@ export class SelectOptionComponent implements ControlValueAccessor {
   @Input() placeholder!: string
   @Input() list!: string[]
 
-  onChange: OnChnageFn<string> = () => {}
+  onChange: OnChnageFn<number> = () => {}
   onTouchFn: OnTouchFn = () => {}
-  selected: string | undefined
+  selected: number | undefined
   open = false
 
   selectItem(item:string){
     this.open = false
-    this.selected = item
+    this.selected = this.list.indexOf(item)
     this.onChange(this.selected)
   }
   
 
   // control value accessor
-  writeValue(val: string): void {
+  writeValue(val: number): void {
     if(val === null) return;
     this.selected = val
   }
-  registerOnChange(fn: OnChnageFn<string>): void {
+  registerOnChange(fn: OnChnageFn<number>): void {
     this.onChange = fn
   }
   registerOnTouched(fn: OnTouchFn): void {

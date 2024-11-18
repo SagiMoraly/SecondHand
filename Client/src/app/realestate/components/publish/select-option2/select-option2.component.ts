@@ -16,22 +16,22 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class SelectOption2Component implements ControlValueAccessor {
   @Input() options!: string[]
   
-  onChange: OnChangeFn<string> = () => {}
+  onChange: OnChangeFn<number> = () => {}
   onTouch: OnTouchFn = () => {}
 
-  selected: undefined | string
+  selected: undefined | number
 
   selectMe(option : string){
-    this.selected = option
+    this.selected = this.options.indexOf(option)
     this.onChange(this.selected)
   }
 
   // control value accessor
-  writeValue(value: string): void {
+  writeValue(value: number): void {
     if(value === null)return;
     this.selected = value
   }
-  registerOnChange(fn: OnChangeFn<string>): void {
+  registerOnChange(fn: OnChangeFn<number>): void {
     this.onChange = fn
   }
   registerOnTouched(fn: OnTouchFn): void {

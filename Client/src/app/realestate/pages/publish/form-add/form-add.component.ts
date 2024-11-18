@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IClientSaleObj } from '../../../interfaces/IClientSaleObj';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
+import { RealestateApiService } from '../../../../core/services/realestate-api.service';
 
 @Component({
   selector: 'app-form-add',
@@ -12,17 +13,15 @@ export class FormAddComponent {
   stage = 1
 
   formData: any[] = []
-constructor(private http:HttpClient){}
+constructor(
+  private realestateApi : RealestateApiService
+){}
   nextStageAndSaveData(data :{}, stage:number){
     this.stage++
     this.formData[stage] = data
     console.log(this.formData , this.stage)
     if(this.stage == 8)
-      this.uploadRealestate(this.orderStagesObj(this.formData)).then(
-        r => console.log("nice " + r)
-      ).catch(
-        e => console.log(e)
-      ) 
+      this.uploadRealestate(this.orderStagesObj(this.formData))
   }
 
   editMe(data:{} , stage:number){
@@ -32,26 +31,24 @@ constructor(private http:HttpClient){}
 
   orderStagesObj(stages: any[]): IClientSaleObj{
     const realestateData = {...(stages[1]),...(stages[2]),...(stages[3]),...(stages[4]),...(stages[6]),...(stages[7])}
+    
     let orderedObj:any = {
-      images: stages[5],
+      images: stages[5].images,
       realestateData: {...realestateData, images:'' }
     }
     console.log(orderedObj);
     return orderedObj
   }
 
-  uploadRealestate(body: IClientSaleObj){
-    return firstValueFrom(this.http.post("https://localhost:7155/api/Realestate",body))
+  uploadRealestate(clientSaleObj: IClientSaleObj){
+    const fd = new FormData()
+    clientSaleObj.images.forEach(
+      (img,key) => fd.append(`images` , img as any, (img as any).name)
+    )
+    
+    this.realestateApi.postSaleRealestate({...clientSaleObj, images:fd}).then(
+      r => console.log("im here", r)
+    )
+   // model binder Image: IformFIle 
   }
-/*
-  only one is active at a time
-  3 types 
-    1. not selected clean
-    2. selected open
-    3. completed openable
-    make stages clickable only on type 3 (here)
-  data from each one should be here in the main (here)
-  pass data saved to the points?
-  or send upwords the data for each one  
-*/
 }

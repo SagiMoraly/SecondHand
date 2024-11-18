@@ -1,13 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MainAPIService {
   private _token!: BehaviorSubject<string | null>
+  IMAGE_API_URL = "https://localhost:7155/api/Image"
 
-  constructor() { 
+  constructor(
+    private http: HttpClient
+  ) { 
     let tokenFromLocalStorage = localStorage.getItem("token")
     tokenFromLocalStorage = tokenFromLocalStorage ? tokenFromLocalStorage : null  
     this._token = new BehaviorSubject<string | null>(tokenFromLocalStorage)
@@ -29,6 +33,9 @@ export class MainAPIService {
   logoutUser(){
     localStorage.removeItem("token")
     this.token = null
+  }
 
+  async uploadImages(images: FormData): Promise<string>{
+    return firstValueFrom(this.http.post(this.IMAGE_API_URL, images, { responseType: 'text' }))
   }
 }

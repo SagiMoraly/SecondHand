@@ -9,7 +9,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   providedIn: 'root'
 })
 export class UserAPIService implements OnInit {
-readonly ROOT_URL = "https://localhost:7155/api/User/"
+readonly USER_API_URL = "https://localhost:7155/api/User/"
 private _user =  new BehaviorSubject<IUser | null>(null)
 
   constructor(
@@ -48,20 +48,20 @@ private _user =  new BehaviorSubject<IUser | null>(null)
   }
 
   async loginUser(body:{}){
-    return firstValueFrom(this.http.post(this.ROOT_URL + "login", body)).then(
+    return firstValueFrom(this.http.post(this.USER_API_URL + "login", body)).then(
       tokenObj => this.mainAPI.setToken(String((tokenObj as any).token))
     )
   }
 
   async signupUser(body:{}){
-    return firstValueFrom(this.http.post(this.ROOT_URL, body))
+    return firstValueFrom(this.http.post(this.USER_API_URL, body))
   }
 
   async isEmailExist(email: string){
-    return firstValueFrom(this.http.get(this.ROOT_URL + email))
+    return firstValueFrom(this.http.get(this.USER_API_URL + email))
   }
 
   async getUser(){
-    return firstValueFrom(this.http.get<IUser>(this.ROOT_URL))
+    return firstValueFrom(this.http.get<IUser>(this.USER_API_URL))
   }
 }

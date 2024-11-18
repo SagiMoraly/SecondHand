@@ -36,3 +36,4 @@ export class EstateStage6Component implements OnInit{
       this.formCompleted.emit(this.form.value)
   }
 }
+

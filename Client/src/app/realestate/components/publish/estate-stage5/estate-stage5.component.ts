@@ -1,10 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-estate-stage5',
   templateUrl: './estate-stage5.component.html',
-  styleUrl: './estate-stage5.component.scss'
+  styleUrl: './estate-stage5.component.scss',
 })
 export class EstateStage5Component implements OnInit{
   @Input() show!: boolean
@@ -23,6 +23,10 @@ export class EstateStage5Component implements OnInit{
     })
   }
 
+  upDateFormImages(){
+    this.form.controls['images'].setValue(this.fileList)
+  }
+
   convertFromFileToURLImage(e:any){
     const target = e.target as HTMLInputElement;
     const file = target.files?.[0]
@@ -30,13 +34,13 @@ export class EstateStage5Component implements OnInit{
       this.imgURLList.push(URL.createObjectURL(file))  
       this.fileList.push(file)     
     }
-    this.form.controls['images'].setValue(this.fileList)
+    this.upDateFormImages()
   }
 
   removeThisImage(index: number){
     this.imgURLList.splice(index, 1)
     this.fileList.splice(index, 1)
-    this.form.controls['images'].setValue(this.fileList)
+    this.upDateFormImages()
   }
 
   onSubmit(){

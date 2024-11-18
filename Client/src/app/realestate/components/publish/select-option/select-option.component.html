@@ -1,5 +1,5 @@
 <div class="item-box" [ngClass]="open ? 'open' : ''" (click)="open = !open">
-    <div class="selected" *ngIf="selected else notSelected">{{selected}}</div>
+    <div class="selected" *ngIf="(selected !== undefined) else notSelected">{{list[selected]}}</div>
     <ng-template #notSelected >
         <div class="placeholder">
             {{placeholder}}
@@ -11,7 +11,7 @@
             <div>
                 {{item}}
             </div>
-            <div *ngIf="item == selected">
+            <div *ngIf="item === ((selected !== undefined) ? list[selected] : undefined)">
                 <span class="item-text_leftSided__Z7lkr" data-testid="item-check-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="item-text_checkIcon__zpNnB"><path d="M19.938 5.492a.75.75 0 011.172.929l-.069.087L9.804 18.724a1.752 1.752 0 01-2.565.012l-.104-.122-4.727-6.068a.75.75 0 011.11-1.004l.074.082 4.727 6.069a.25.25 0 00.35.043l.031-.028L19.938 5.492z" fill="currentColor"></path></svg></span>
             </div>
         </li>

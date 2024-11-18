@@ -18,20 +18,13 @@ namespace Server.Repository
             _context = context;
             _imageService = imageService;
         }
-        public async Task<bool> AddSale(ClientRealestateSaleObjctModel clientObj)
+        public async Task<bool> AddSale(RealestateForsaleModel clientSaleObj)
         {
-            if ( clientObj == null )
+            if (clientSaleObj == null )
             {
                 return false;
             }
-            string pathForImages = null;
-            if (clientObj.Images != null )
-            {
-                pathForImages = await _imageService.SaveImagesAsync(clientObj.Images);
-            }
-            var saleObj = clientObj.RealestateData;
-            saleObj.ImagesPath = pathForImages;
-            await _context.RealestateForsale.AddAsync(saleObj);
+            await _context.RealestateForsale.AddAsync(clientSaleObj);
             await _context.SaveChangesAsync();
             return true;
         }

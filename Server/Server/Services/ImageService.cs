@@ -6,18 +6,24 @@ namespace Server.Services
     {
         readonly string folderDirectory = @"C:\Users\ogoritoo\Desktop\Programing\JavaScript\SecondHand\SecondHand\Server\Server\Images\Realestates\";
 
-        public async Task<string> SaveImagesAsync(List<byte[]> Images)
+        public async Task<string> SaveImagesAsync(IFormFileCollection Images)
         {
             string uniqueFolderName = $"Images_{DateTime.Now:yyyyMMdd_HHmmssffff}";
             string fileFolderFullPath = Path.Combine(folderDirectory, uniqueFolderName);
             Directory.CreateDirectory(fileFolderFullPath);
         
-            foreach (byte[] byteArrImg in Images)
+            foreach (var imageFile in Images)
             {
-                string uniqueFileName = $"Image_{Guid.NewGuid()}.png";
-                string filePath = Path.Combine(fileFolderFullPath, uniqueFileName);
+                if(imageFile.Length > 0)
+                {
+                    string uniqueFileName = $"Image_{Guid.NewGuid()}.png";
+                    string filePath = Path.Combine(fileFolderFullPath, uniqueFileName);
 
-                await File.WriteAllBytesAsync(filePath, byteArrImg);
+                    using (var stream = System.IO.File.OpenWrite(filePath))
+                    {
+                        await imageFile.CopyToAsync(stream);
+                    }
+                }
             }
             return uniqueFolderName;
         }
